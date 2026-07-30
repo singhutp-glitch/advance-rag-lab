@@ -1,242 +1,187 @@
-# Internal AI Knowledge Base
+# Advanced RAG Lab
 
-An AI-powered internal knowledge base that helps organizations search, ask questions, and retrieve information from their company documents using natural language. Users can upload documents, receive grounded AI answers with citations, and verify every response through an integrated source panel.
+An engineering-focused repository for researching, implementing, and evaluating advanced Retrieval-Augmented Generation (RAG) techniques beyond a basic document chatbot.
 
-## Overview
+Rather than building another end-user application, this project focuses on the intelligence layer of modern RAG systems—improving how documents are parsed, represented, indexed, retrieved, and evaluated to increase answer accuracy on complex business documents.
 
-Most businesses store important information across reports, SOPs, contracts, technical documentation, research, policies, manuals, and other internal documents. As these documents grow over time, employees often spend time searching through folders or asking coworkers for information that already exists.
+The repository serves as an experimentation platform for implementing production-oriented RAG techniques commonly used in enterprise document intelligence systems.
 
-This project demonstrates how Retrieval-Augmented Generation (RAG) can turn business documents into an AI knowledge assistant that answers questions using retrieved document content instead of relying only on a language model's general knowledge.
+---
 
-The goal is simple: every answer should be grounded in your documents and easy to verify.
+# Motivation
 
-Instead of asking users to trust the model, every response can be traced back to the supporting document content.
-
-## Typical Business Documents
-
-This project is designed for knowledge commonly found inside businesses, including:
-
-- Standard Operating Procedures (SOPs)
-- Internal policies and manuals
-- Research reports and market analysis
-- Client reports and project deliverables
-- Technical documentation
-- Contracts and compliance documents
-- Financial reports
-- PDF, DOCX, Markdown, and other business documents
-
-## Example Use Cases
-
-- Internal AI knowledge assistant
-- Company document search
-- Employee onboarding assistant
-- Engineering documentation search
-- Research document assistant
-- Technical manual search
-- Financial report search
-- Policy and compliance assistant
-
-# Current Features
-
-## Secure Authentication
-
-- User registration and login
-- JWT-based authentication
-- User-specific chat history
-
-## Persistent AI Conversations
-
-- Create multiple conversations
-- Conversation history stored in PostgreSQL
-- Resume previous chats at any time
-
-## Document Upload
-
-Upload company documents directly into a conversation.
-
-Supported formats:
-
-- PDF
-- DOCX
-- TXT
-
-After upload, each document is automatically processed and indexed for semantic retrieval.
-
-## Document Processing
-
-Each uploaded document goes through the following pipeline:
-
-- Text extraction
-- Intelligent text chunking
-- Embedding generation
-- Vector storage using PostgreSQL + pgvector
-
-This allows documents to be searched by semantic meaning rather than exact keywords.
-
-## Retrieval-Augmented Generation (RAG)
-
-Instead of relying only on the language model's general knowledge, the system:
-
-1. Embeds the user's question
-2. Searches uploaded documents
-3. Retrieves the most relevant document chunks
-4. Sends the retrieved context to the language model
-5. Streams a grounded response back to the user
-
-## Semantic Search
-
-Questions are answered using vector similarity search, allowing relevant information to be retrieved even when the wording differs from the original document.
-
-## Streaming Responses
-
-Responses are streamed token-by-token to provide a fast and responsive chat experience.
-
-The interface also displays retrieval progress while answers are being generated.
-
-## Source Verification
-
-Every AI response includes inline citations.
-
-Selecting a citation opens a source panel showing:
-
-- Source document
-- Retrieved document chunk
-- Supporting document content
-
-This allows users to verify the information used to generate each answer.
-
-## Adjustable Source Panel
-
-The source panel is integrated directly into the workspace and can be resized so document evidence and AI responses can be viewed side by side.
-
-## Search Scope
-
-The interface is designed to support multiple knowledge scopes.
-
-Current:
-
-- Chat Documents
-
-Planned:
-
-- User Documents
-- Organization Knowledge
-
-## Planned Improvements
-
-- User document library
-- Organization knowledge library
-- Page-level document citations
-- Hybrid keyword + semantic retrieval
-- Metadata filtering
-
-# System Architecture
+A typical RAG pipeline looks like this:
 
 ```text
-                     User Question
-                           │
-                           ▼
-                    Search Scope
-                           │
-                           ▼
-                  Semantic Retrieval
-                           │
-                           ▼
-                Retrieved Document Chunks
-                           │
-                           ▼
-                Gemini Language Model
-                           │
-                           ▼
-           Grounded AI Response + Citations
-                           │
-                           ▼
-               Interactive Source Panel
+Document
+    │
+    ▼
+Text Extraction
+    │
+    ▼
+Fixed-Size Chunking
+    │
+    ▼
+Embeddings
+    │
+    ▼
+Vector Search
+    │
+    ▼
+LLM
 ```
 
-## Technology Stack
+This approach works reasonably well for simple documents, but begins to fail when processing real business knowledge such as:
 
-### Frontend
+* Annual reports
+* Company policies
+* Technical manuals
+* Consulting reports
+* Financial statements
+* Compliance documentation
+* Research papers
 
-- React
-- Vite
-- Axios
-- React Markdown
-- Remark GFM
-- Rehype Raw
+These documents contain rich structure—including headings, tables, lists, figures, appendices, and metadata—that is often lost during plain text extraction.
 
-### Backend
+Once that structure is discarded, retrieval quality degrades regardless of how capable the language model is.
 
-- Node.js
-- Express.js
-- Prisma ORM
-- JWT Authentication
+This repository explores techniques that preserve and utilize document structure to build more reliable retrieval pipelines.
 
-### Database
+---
 
-- PostgreSQL
-- pgvector
+# Repository Goals
 
-### AI
+The objectives of this repository are:
 
-- Gemini API
-- Gemini Embedding Model
+* Implement structure-preserving document ingestion pipelines.
+* Evaluate different chunking strategies.
+* Improve retrieval quality on complex business documents.
+* Experiment with modern RAG techniques proposed in recent research.
+* Build repeatable evaluation workflows for measuring retrieval improvements.
+* Demonstrate engineering approaches that move beyond basic semantic search.
 
-## Retrieval Pipeline
+---
+
+# Current Focus
+
+## Structure-Preserving Document Parsing
+
+The current development effort focuses on parsing documents while preserving their logical structure rather than flattening everything into plain text.
+
+Examples include:
+
+* Heading hierarchy
+* Sections and subsections
+* Tables
+* Lists
+* Document metadata
+* Page information
+* Structured document elements
+
+The goal is to generate richer document representations that can support higher-quality retrieval.
+
+---
+
+## Context-Aware Chunking
+
+Instead of relying solely on fixed-size chunking, this repository explores chunking strategies that preserve semantic and structural context.
+
+Areas of experimentation include:
+
+* Section-aware chunking
+* Heading-aware chunking
+* List-aware chunking
+* Table-aware chunking
+* Context-enriched chunks
+* Chunk metadata generation
+
+The objective is to reduce context fragmentation and improve retrieval precision.
+
+---
+
+# Technology Direction
+
+The project adopts a hybrid architecture:
 
 ```text
-Document Upload
+Node.js Backend
         │
         ▼
-Document Parsing
+Python Document Processing Service
         │
         ▼
-Text Chunking
+Docling
+        │
+        ▼
+Structured Document Representation
+        │
+        ▼
+Chunking Pipeline
         │
         ▼
 Embedding Generation
         │
         ▼
 Vector Database
-        │
-        ▼
-Semantic Search
-        │
-        ▼
-Retrieved Context
-        │
-        ▼
-Gemini
-        │
-        ▼
-Grounded Answer
-        │
-        ▼
-Inline Citations
-        │
-        ▼
-Source Verification Panel
 ```
 
-# Why This Project Matters
+The existing Node.js application provides the surrounding infrastructure, while Python is used for document processing because of its mature ecosystem for document AI.
 
-Businesses need AI systems that answer questions from their own documents rather than relying only on a language model's general knowledge.
+---
 
-This project demonstrates how Retrieval-Augmented Generation (RAG), semantic search, and source citations can help teams quickly find information while keeping every answer grounded in company documents and easy to verify.
+# Planned Areas of Research
 
-The goal is not only to generate answers, but also to give users confidence in those answers by making the supporting document content easy to inspect.
+This repository is intended to grow into an experimentation platform for advanced RAG techniques.
 
-## Repository Purpose
+Planned topics include:
 
-This repository demonstrates the design and implementation of a modern AI knowledge base for internal company documents.
+## Document Processing
 
-It showcases:
+* Structure-preserving PDF parsing
+* Advanced DOCX parsing
+* Layout-aware document extraction
+* Table extraction
+* Metadata extraction
+* Figure and caption handling
 
-- Full-stack web application development
-- Retrieval-Augmented Generation (RAG)
-- Semantic search with vector databases
-- Document ingestion pipelines
-- Streaming LLM responses
-- Source-grounded AI answers
-- Interactive citation verification
-- Modern React and Node.js architecture
+---
+
+## Chunking
+
+* Recursive chunking
+* Semantic chunking
+* Context-aware chunking
+* Structure-aware chunking
+* Table-aware chunking
+* Hierarchical chunking
+
+---
+
+## Retrieval
+
+* Dense retrieval
+* Hybrid keyword + vector retrieval
+* Metadata filtering
+* Query expansion
+* Query rewriting
+* Multi-query retrieval
+* Parent-child retrieval
+* Reranking
+
+---
+
+## Evaluation
+
+Rather than only demonstrating implementations, the repository also evaluates them.
+
+Experiments compare techniques using representative business documents and measure improvements such as:
+
+* Retrieval accuracy
+* Citation quality
+* Context preservation
+* Table retrieval performance
+* Answer grounding quality
+
+Where appropriate, experiments include before/after comparisons and quantitative evaluation.
+
+---
