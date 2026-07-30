@@ -72,3 +72,39 @@ temp/
 # =========================
 *.pid
 *.seed
+
+
+# =========================
+# Python (document-service)
+# =========================
+
+# Virtual environment
+document-service/venv/
+
+# Python bytecode
+document-service/__pycache__/
+**/__pycache__/
+*.py[cod]
+
+# Compiled Python extensions
+*.so
+
+# Python environment files
+.python-version
+
+# Environment variables
+document-service/.env
+document-service/.env.*
+
+# IDE settings (optional)
+document-service/.vscode/
+
+# Test & coverage (for future)
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Build artifacts (for future)
+build/
+dist/
+*.egg-info/
