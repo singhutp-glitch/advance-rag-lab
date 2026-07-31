@@ -1,6 +1,7 @@
 from fastapi import FastAPI, UploadFile, File
 import shutil
 from app.parser import parse_document
+from pathlib import Path
 
 app = FastAPI(
     title='Document Service',
@@ -8,7 +9,7 @@ app = FastAPI(
 )
 
 Upload_DIR = Path('uploads')
-Upload_DIR.mkdir(exists_ok = True)
+Upload_DIR.mkdir(exist_ok = True)
 
 @app.get('/')
 def root():
@@ -33,6 +34,6 @@ async def parse(file: UploadFile = File(...)):
     document = parse_document(file_path)
 
     return {
-        'success': True
+        'success': True,
         "filename": file.filename
     }
