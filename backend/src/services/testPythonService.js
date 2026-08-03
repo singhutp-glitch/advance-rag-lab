@@ -1,5 +1,5 @@
 import path from "path";
-import { parseDocument } from "./pythonParser.js";
+import { parseDocument } from "../rag/parsers/pythonParser.js";
 
 const filePath = path.join(
     import.meta.dirname,

@@ -110,3 +110,8 @@ htmlcov/
 build/
 dist/
 *.egg-info/
+
+#upload folder
+
+document-service/uploads/*
+!document-service/uploads/.gitkeep

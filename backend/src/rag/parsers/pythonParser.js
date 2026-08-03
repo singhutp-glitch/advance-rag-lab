@@ -2,13 +2,13 @@ import axios from "axios";
 import FormData from "form-data";
 import fs from "fs";
 
-export async function parseDocument(filePath) {
+export async function pythonadvanceParse(file) {
 
     const form = new FormData();
 
     form.append(
         "file",
-        fs.createReadStream(filePath)
+        fs.createReadStream(file.filePath)
     );
 
     const response = await axios.post(

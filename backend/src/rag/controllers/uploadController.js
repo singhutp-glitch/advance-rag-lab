@@ -24,23 +24,26 @@ export default async function postUploadDocument(req,res){
                 error:'Chat not found'
             })
         };
-        await uploadDocument(req.file.buffer,req.file.originalname);
+        req.file.filePath = await uploadDocument(req.file.buffer,req.file.originalname);
         const extension = path.extname(req.file.originalname);
 
         const storedFileName = `${randomUUID()}${extension}`;
+
+
         const parsedDocument = await parseDocument(req.file);
-        const chunks = await chunkDocument(parsedDocument);
+        console.log('parse result - ',parsedDocument);
+        // const chunks = await chunkDocument(parsedDocument);
 
-        const finalChunks = await generateEmbeddings(chunks);
+        // const finalChunks = await generateEmbeddings(chunks);
 
-        const document = await saveDocumentandChunk({
-            originalname: req.file.originalname,
-            mimetype: req.file.mimetype,
-            size: req.file.size,
-            userId: req.user.userId,
-            chatId: chatId,
-            storedFileName,
-        },chunks);
+        // const document = await saveDocumentandChunk({
+        //     originalname: req.file.originalname,
+        //     mimetype: req.file.mimetype,
+        //     size: req.file.size,
+        //     userId: req.user.userId,
+        //     chatId: chatId,
+        //     storedFileName,
+        // },chunks);
         
 
             res.status(200).json({
