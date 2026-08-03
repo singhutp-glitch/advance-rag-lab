@@ -31,7 +31,7 @@ export default async function postUploadDocument(req,res){
 
 
         const parsedDocument = await parseDocument(req.file);
-        console.log('parse result - ',parsedDocument);
+        console.log('parse result - ',parsedDocument.markdown.slice(0,200));
         // const chunks = await chunkDocument(parsedDocument);
 
         // const finalChunks = await generateEmbeddings(chunks);

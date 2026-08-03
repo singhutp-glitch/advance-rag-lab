@@ -34,6 +34,6 @@ async def parse(file: UploadFile = File(...)):
     document = parse_document(file_path)
 
     return {
-        'success': True,
-        "filename": file.filename
-    }
+    "document": document.export_to_dict(),
+    "markdown": document.export_to_markdown()
+}
