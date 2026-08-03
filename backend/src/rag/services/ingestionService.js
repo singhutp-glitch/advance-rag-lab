@@ -11,7 +11,7 @@ export async function saveDocumentandChunk(data,chunks) {
             size: data.size,
             userId: data.userId,
             chatId: data.chatId,
-            storagePath:data.storagePath
+            storedFileName:data.storedFileName
         });
 
         await saveChunk(tx,chunks,document);

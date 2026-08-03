@@ -11,7 +11,9 @@ node_modules/
 !.env.example
 frontend/.env
 
-backend/src/rag/upload/uploads/
+backend/src/rag/upload/uploads/*
+!backend/src/rag/upload/uploads/.gitkeep
+
 
 
 # =========================

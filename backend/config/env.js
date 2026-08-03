@@ -11,9 +11,6 @@ export const config ={
     geminiApiKey: process.env.GEMINI_API_KEY,
 
     frontendUrl: process.env.FRONTEND_URL,
-    
-    supabaseUrl : process.env.SUPABASE_URL,
-    supabaseServiceRoleKey : process.SUPABASE_SERVICE_ROLE_KEY
 };
 
 // config/env.js
@@ -23,8 +20,6 @@ const required = [
     "JWT_SECRET",
     "GEMINI_API_KEY",
     'FRONTEND_URL',
-    "SUPABASE_URL",
-    "SUPABASE_SERVICE_ROLE_KEY"
 ];
 
 for (const key of required) {
