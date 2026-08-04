@@ -6,7 +6,7 @@ import { pythonadvanceParse } from "./pythonParser.js";
 export async function parseDocument(file){
     switch(file.mimetype){
         case "application/pdf":
-            return await pythonadvanceParse(file);
+            return await parsePdf(file);
         case "application/vnd.openxmlformats-officedocument.wordprocessingml.document":
             return await parseDocx(file);
         case "text/plain":

@@ -20,6 +20,8 @@ const Main = ({currentChatId,setCurrentChatId,loadChats,messages,setMessages
     const [knowledgeScope,setKnowledgeScope] = useState("chat");
     const [searchMode,setSearchMode] = useState(false);
     const [isUploading,setIsUploading] = useState(false);
+    const [documentContent,setDocumentContent] = useState('');
+    const [showContent, setShowContent] = useState(false);
     
 
     useEffect(() => {
@@ -83,6 +85,7 @@ const Main = ({currentChatId,setCurrentChatId,loadChats,messages,setMessages
                     scrollMessagesToBottom("smooth");
                     return updated;
                 });
+                setDocumentContent(uploadResponse.documentContent);
         
 
     } catch (err) {
@@ -330,6 +333,8 @@ function scrollMessagesToBottom(behavior = "smooth") {
                     setSourceBarSources={setSourceBarSources}
                     documentSourceCache={documentSourceCache}
                     setDocumentSourceCache={setDocumentSourceCache}
+                    showContent = {showContent}
+                    documentContent = {documentContent}
                 />
             )}
         </div>
@@ -407,6 +412,17 @@ function scrollMessagesToBottom(behavior = "smooth") {
 
                         </button>
 
+
+                        <button
+                            className="toolbar-item"
+                            onClick={()=>setShowContent(prev=>!prev)}
+                        >
+
+                            {"show content"}
+
+                        </button>
+
+                        
 
                     </div>
 

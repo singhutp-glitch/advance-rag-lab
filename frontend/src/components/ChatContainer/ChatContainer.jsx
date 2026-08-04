@@ -9,7 +9,7 @@ import { getChunk } from '../../services/api.js';
 
 
 const ChatContainer = ({messages,setSourceBar,setSourceBarSources
-     ,documentSourceCache,setDocumentSourceCache
+     ,documentSourceCache,setDocumentSourceCache,showContent,documentContent
 }) => {
   
  async function openCitation(ids,citations){
@@ -44,8 +44,20 @@ const ChatContainer = ({messages,setSourceBar,setSourceBarSources
 
   return (
     <div className="chat-container">
-      
-  {messages.map((message, index) => (
+  {
+  showContent?
+  ( <div className="message assistant">
+    <div className="message-content markdown">
+    
+    
+     
+    <ReactMarkdown remarkPlugins={[remarkGfm]}>
+      {documentContent}
+    </ReactMarkdown>
+    
+    </div>
+  </div>):   
+  (messages.map((message, index) => (
     <div
       key={index}
       className={`message ${message.role}`}
@@ -92,7 +104,7 @@ const ChatContainer = ({messages,setSourceBar,setSourceBarSources
 }
 </div>
     </div>
-  ))}
+  )))}
 </div>
   )
 }

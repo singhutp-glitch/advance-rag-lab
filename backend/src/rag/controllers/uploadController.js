@@ -31,7 +31,7 @@ export default async function postUploadDocument(req,res){
 
 
         const parsedDocument = await parseDocument(req.file);
-        console.log('parse result - ',parsedDocument.markdown.slice(0,200));
+        console.log('parse result - ',parsedDocument.fullText.slice(0,200));
         // const chunks = await chunkDocument(parsedDocument);
 
         // const finalChunks = await generateEmbeddings(chunks);
@@ -47,7 +47,8 @@ export default async function postUploadDocument(req,res){
         
 
             res.status(200).json({
-                message:'Upload successful'
+                message:'Upload successful',
+                documentContent:parsedDocument.fullText
             })
         }catch(error){
             console.error(error);
