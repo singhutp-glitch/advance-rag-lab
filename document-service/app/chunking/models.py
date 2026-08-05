@@ -18,3 +18,17 @@ class ChunkType(Enum):
     LIST = "list"
     FIGURE = "figure"
     CAPTION = "caption"
+
+
+
+@dataclass
+class DocumentElement:
+    element_index: int
+    type: str
+    markdown: str
+    pages: List[int]
+
+
+@dataclass
+class NormalizedDocument:
+    elements: List[DocumentElement]
