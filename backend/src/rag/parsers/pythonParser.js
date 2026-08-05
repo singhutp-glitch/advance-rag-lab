@@ -1,6 +1,7 @@
 import axios from "axios";
 import FormData from "form-data";
 import fs from "fs";
+import { normalize } from "path/posix";
 
 export async function pythonadvanceParse(file) {
 
@@ -23,5 +24,8 @@ export async function pythonadvanceParse(file) {
 
     );
 
-    return response.data;
+    return {
+        parsedText: response.data.markdown,
+        normalizedDocument: response.data.normalizedDocument
+    };
 }

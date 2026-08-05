@@ -2,6 +2,8 @@ from fastapi import FastAPI, UploadFile, File
 import shutil
 from app.parser import parse_document
 from pathlib import Path
+from app.parser import normalizeDoclingDocument
+from dataclasses import asdict
 
 app = FastAPI(
     title='Document Service',
@@ -32,8 +34,10 @@ async def parse(file: UploadFile = File(...)):
     with open(file_path,"wb") as buffer:
         shutil.copyfileobj(file.file,buffer)
     document = parse_document(file_path)
+    normalizedDocument = normalizeDoclingDocument(document)
+    
 
     return {
-    "document": document.export_to_dict(),
-    "markdown": document.export_to_markdown()
+    "markdown": document.export_to_markdown(),
+    "normalizedDocument": asdict(normalizedDocument)
 }
