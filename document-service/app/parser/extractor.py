@@ -48,6 +48,8 @@ def normalizeDoclingDocument(
 
             markdown = element.text
 
+        elif element.label == "list":
+            markdown = list_to_markdown(element,doclingDocument)
         else:
 
             markdown = ""
@@ -72,3 +74,16 @@ def normalizeDoclingDocument(
         )
 
     return NormalizedDocument(elements=elements)
+
+
+def list_to_markdown(list_group, doc):
+
+    markdown_lines = []
+
+    for child_ref in list_group.children:
+
+        child = child_ref.resolve(doc)
+
+        markdown_lines.append(f"- {child.text}")
+
+    return "\n".join(markdown_lines)

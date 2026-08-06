@@ -37,22 +37,10 @@ export default async function postUploadDocument(req,res){
 
         const parsedDocument = await parseDocument(req.file);
             
-        // const outputPath = path.join(
-        //     __dirname,
-        //     "parsedDocument.json"
-        // );
-
-        // fs.writeFileSync(
-        //     outputPath,
-        //     JSON.stringify(parsedDocument, null, 4),
-        //     "utf8"
-        // );
-
-        // console.log("Parsed document saved to:", outputPath);
                 
         const chunks = await chunkDocument(parsedDocument);
         const chunkText = chunks
-  .slice(9, 19)
+  .slice(0, 30)
   .map(
     (chunk, index) => `
 ## Chunk ${index}
@@ -61,7 +49,9 @@ export default async function postUploadDocument(req,res){
 
 **Heading:** ${chunk.sectionHeading}
 
-**Content:** ${chunk.text}
+**Content:** 
+
+${chunk.text}
 `
   )
   .join("\n\n---\n\n");
