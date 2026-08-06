@@ -17,7 +17,7 @@ def normalizeDoclingDocument(
         #
         # Resolve the body reference into the real object
         #
-        element = doclingDocument.resolve_ref(child.cref)
+        element = child.resolve(doclingDocument)
 
         #
         # Collect page numbers
@@ -38,7 +38,11 @@ def normalizeDoclingDocument(
         #
         if hasattr(element, "export_to_markdown"):
 
-            markdown = element.export_to_markdown()
+            try:
+               markdown = element.export_to_markdown()
+
+            except TypeError:
+                markdown = element.export_to_markdown(doclingDocument)
 
         elif hasattr(element, "text"):
 

@@ -1,8 +1,8 @@
 from fastapi import FastAPI, UploadFile, File
 import shutil
-from app.parser import parse_document
+from app.parser.parser import parse_document
 from pathlib import Path
-from app.parser import normalizeDoclingDocument
+from app.parser.extractor import normalizeDoclingDocument
 from dataclasses import asdict
 
 app = FastAPI(

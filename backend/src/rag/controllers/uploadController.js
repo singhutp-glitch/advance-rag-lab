@@ -6,6 +6,11 @@ import { searchChatIdwithUserId } from "../../services/databaseService.js";
 import {uploadDocument} from '../services/storageService.js'
 import { randomUUID } from "crypto";
 import path from "path";
+import fs from "fs";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 
 export default async function postUploadDocument(req,res){
@@ -31,7 +36,20 @@ export default async function postUploadDocument(req,res){
 
 
         const parsedDocument = await parseDocument(req.file);
-        console.log('parse result - ',parsedDocument.parsedText.slice(0,200));
+            
+        const outputPath = path.join(
+            __dirname,
+            "parsedDocument.json"
+        );
+
+        fs.writeFileSync(
+            outputPath,
+            JSON.stringify(parsedDocument, null, 4),
+            "utf8"
+        );
+
+        console.log("Parsed document saved to:", outputPath);
+                
         const chunks = await chunkDocument(parsedDocument);
         chunks.slice(0,4).forEach((chunk,index) => {
             console.log(`chunk result ${index} - `,chunk.text)

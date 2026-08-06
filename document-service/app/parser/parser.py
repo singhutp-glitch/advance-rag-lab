@@ -10,7 +10,7 @@ def parse_document(file_path: str| Path) -> DoclingDocument:
     file_path = Path(file_path)
 
     if not file_path.exists():
-        raise FileNotFoundError(f'Dcocument not found: {file_path}')
+        raise FileNotFoundError(f'Document not found: {file_path}')
 
 
 
