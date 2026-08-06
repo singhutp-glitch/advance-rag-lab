@@ -8,7 +8,7 @@ export function structureAwareChunking(normalizedDocument) {
     for (const element of normalizedDocument.elements) {
 
         // Remember the latest heading
-        if (element.type === "heading") {
+        if (element.type === "section_header") {
             currentHeading = element.markdown;
             continue;
         }

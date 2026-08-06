@@ -37,24 +37,34 @@ export default async function postUploadDocument(req,res){
 
         const parsedDocument = await parseDocument(req.file);
             
-        const outputPath = path.join(
-            __dirname,
-            "parsedDocument.json"
-        );
+        // const outputPath = path.join(
+        //     __dirname,
+        //     "parsedDocument.json"
+        // );
 
-        fs.writeFileSync(
-            outputPath,
-            JSON.stringify(parsedDocument, null, 4),
-            "utf8"
-        );
+        // fs.writeFileSync(
+        //     outputPath,
+        //     JSON.stringify(parsedDocument, null, 4),
+        //     "utf8"
+        // );
 
-        console.log("Parsed document saved to:", outputPath);
+        // console.log("Parsed document saved to:", outputPath);
                 
         const chunks = await chunkDocument(parsedDocument);
-        chunks.slice(0,4).forEach((chunk,index) => {
-            console.log(`chunk result ${index} - `,chunk.text)
-        })
-        
+        const chunkText = chunks
+  .slice(9, 19)
+  .map(
+    (chunk, index) => `
+## Chunk ${index}
+
+**Type:** ${chunk.type}
+
+**Heading:** ${chunk.sectionHeading}
+
+**Content:** ${chunk.text}
+`
+  )
+  .join("\n\n---\n\n");
 
         // const finalChunks = await generateEmbeddings(chunks);
 
@@ -70,7 +80,7 @@ export default async function postUploadDocument(req,res){
 
             res.status(200).json({
                 message:'Upload successful',
-                documentContent:parsedDocument.fullText
+                documentContent:chunkText
             })
         }catch(error){
             console.error(error);
