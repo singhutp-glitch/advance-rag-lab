@@ -1,7 +1,7 @@
 from parser import parse_document
 from extractor import normalizeDoclingDocument
 from docling_core.types.doc.document import DoclingDocument
-document = parse_document('sample_pdf/chain_of_thought_paper.pdf')
+document = parse_document('')
 
 print(type(document))
 print(document.name)
