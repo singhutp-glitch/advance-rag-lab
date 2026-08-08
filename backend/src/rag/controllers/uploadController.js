@@ -47,6 +47,8 @@ export default async function postUploadDocument(req,res){
 
 **Type:** ${chunk.type}
 
+**Pages:** ${chunk.startPage} ${chunk.endPage === chunk.startPage?``:`- ${chunk.endPage}`}
+
 **Heading:** ${chunk.sectionHeading}
 
 **Content:** 
@@ -55,7 +57,6 @@ ${chunk.text}
 `
   )
   .join("\n\n---\n\n");
-
         // const finalChunks = await generateEmbeddings(chunks);
 
         // const document = await saveDocumentandChunk({
@@ -70,7 +71,7 @@ ${chunk.text}
 
             res.status(200).json({
                 message:'Upload successful',
-                documentContent:chunkText
+                documentContent:naiveChunkText
             })
         }catch(error){
             console.error(error);

@@ -5,16 +5,16 @@ export function fixedChunking(parsedDocument){
     const chunkSize = 1000;
     const overlap = 200;
     const chunks=[];
-    while(start< parsedDocument.text.length){
+    while(start< parsedDocument.length){
         const end  = start +chunkSize;
-        const chunkText = parsedDocument.text.slice(start,end);
+        const chunkText = parsedDocument.slice(start,end);
         const chunk = {
             text:chunkText,
             index:chunksIndex,
-            metaData:{
-                ...parsedDocument.metaData,
-                chunkLength:chunkText.length
-            }
+            // metaData:{
+            //     ...parsedDocument.metaData,
+            //     chunkLength:chunkText.length
+            // }
         }
         chunks.push(chunk);
         start = end - overlap;

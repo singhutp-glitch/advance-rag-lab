@@ -32,6 +32,8 @@ def normalizeDoclingDocument(
                     for p in element.prov
                 }
             )
+        elif element.label == 'list':
+            pages = list_to_pages(element,doclingDocument )
 
         #
         # Convert different element types
@@ -87,3 +89,26 @@ def list_to_markdown(list_group, doc):
         markdown_lines.append(f"- {child.text}")
 
     return "\n".join(markdown_lines)
+
+def list_to_pages(list_group, doc):
+
+    pages = []
+    seen = set()
+
+    for child_ref in list_group.children:
+
+        child = child_ref.resolve(doc)
+
+        provs = getattr(child, "prov", None)
+
+        if not provs:
+            continue
+
+        for prov in provs:
+            page = getattr(prov, "page_no", None)
+
+            if page is not None and page not in seen:
+                seen.add(page)
+                pages.append(page)
+
+    return pages
