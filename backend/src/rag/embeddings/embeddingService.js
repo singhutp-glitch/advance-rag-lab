@@ -5,9 +5,13 @@ export async function generateEmbeddings(chunks){
     const allEmbeddings =[];
     for(let i= 0;i<chunks.length;i+=batchSize){
         const batch = chunks.slice(i,i+batchSize);
-        const texts = batch.map((chunk) => {return {
-            parts:[{text:chunk.text}]
-        }});
+       const texts = batch.map((chunk) => ({
+                    parts: [
+                        {
+                            text: `Section: ${chunk.sectionHeading || "Unknown"}\n\n${chunk.text}`
+                        }
+                    ]
+                }));
     
         const embeddings = await geminiEmbedding(texts);
         if (embeddings.length !== batch.length) {

@@ -47,7 +47,7 @@ const Main = ({currentChatId,setCurrentChatId,loadChats,messages,setMessages
         ...prev,
         {
             role: "system",
-            content: `Uploading ${fileName}...\n\nPlease wait , it may take a few moments`,
+            content: `Uploading ${fileName}...\n\nPlease wait , it may take about a minute`,
         }]);
         
 

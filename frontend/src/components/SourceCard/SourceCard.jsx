@@ -34,8 +34,8 @@ const SourceCard = ({ source, citationNumber,setSelectedDocument,setViewerOpen }
 
             <div className="source-metadata">
 
-                Page {source.startPage}
-                {source.startPage!==source.endPage && ` - ${source.endPage}`}
+                Page {source.pages[0]}
+                {source.pages[0]!==source.pages.at(-1) && ` - ${source.pages.at(-1)}`}
 
             </div>
 

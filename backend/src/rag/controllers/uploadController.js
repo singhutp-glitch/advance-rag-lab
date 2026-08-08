@@ -57,21 +57,21 @@ ${chunk.text}
 `
   )
   .join("\n\n---\n\n");
-        // const finalChunks = await generateEmbeddings(chunks);
+        const finalChunks = await generateEmbeddings(chunks);
 
-        // const document = await saveDocumentandChunk({
-        //     originalname: req.file.originalname,
-        //     mimetype: req.file.mimetype,
-        //     size: req.file.size,
-        //     userId: req.user.userId,
-        //     chatId: chatId,
-        //     storedFileName,
-        // },chunks);
+        const document = await saveDocumentandChunk({
+            originalname: req.file.originalname,
+            mimetype: req.file.mimetype,
+            size: req.file.size,
+            userId: req.user.userId,
+            chatId: chatId,
+            storedFileName,
+        },chunks);
         
 
             res.status(200).json({
                 message:'Upload successful',
-                documentContent:naiveChunkText
+                documentContent:chunkText
             })
         }catch(error){
             console.error(error);

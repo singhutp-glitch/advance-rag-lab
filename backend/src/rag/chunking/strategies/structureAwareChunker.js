@@ -6,7 +6,9 @@ export function structureAwareChunking(normalizedDocument) {
     let currentHeading = "";
 
     for (const element of normalizedDocument.elements) {
-
+        if(element.type === 'key_value_area' || element.type === 'page_footer'){
+            continue;
+        }
         // Remember the latest heading
         if (element.type === "section_header") {
             currentHeading = element.markdown;

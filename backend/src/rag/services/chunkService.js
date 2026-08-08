@@ -4,10 +4,9 @@ export async function saveChunk(db,chunks,document){
                 documentId: document.id,
                 chunkIndex: chunk.index,
                 text: chunk.text,
-                startOffset:chunk.startOffset,
-                endOffset:chunk.endOffset,
-                startPage:chunk.startPage,
-                endPage:chunk.endPage
+                pages:chunk.pages,
+                sectionHeading:chunk.sectionHeading,
+                type:chunk.type
             }))})                                                                                                                     
 };
 
