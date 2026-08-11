@@ -3,6 +3,7 @@ import { retrieveChunks } from "../services/retrievelService.js";
 import { searchChatIdwithUserId } from "../../services/databaseService.js";
 import { retrieveBM25 } from "../retrieval/bm25/bm25Retieval.js";
 import { retrieveDense } from "../retrieval/dense/denseRetrieval.js";
+import { retrieveHybrid } from "../retrieval/hybrid/hybridRetrieval.js";
 
 export async function getChunks(req,res){
      try{
@@ -28,7 +29,7 @@ export async function getChunks(req,res){
                 });
             }
 
-            const chunkResults = await retrieveDense(query,chatId);
+            const chunkResults = await retrieveHybrid(query,chatId);
 
                 res.status(200).json({
                     message:'Retrieval successful',

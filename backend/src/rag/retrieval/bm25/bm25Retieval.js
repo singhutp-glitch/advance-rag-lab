@@ -47,12 +47,12 @@ export async function retrieveBM25(query,chatId, topK = 10) {
     const chunk = chunks.find(chunk => chunk.id === +chunkId);
 
     return {
-        chunkId,
+        id:chunk.id,
         score,
         rank: index + 1,
         text: chunk.text,
         sectionHeading: chunk.sectionHeading,
-        documentName: chunk.document.originalFileName
+        originalFileName: chunk.document.originalFileName
     };
 });
 }

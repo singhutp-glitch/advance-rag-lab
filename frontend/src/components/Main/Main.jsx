@@ -266,6 +266,7 @@ const Main = ({currentChatId,setCurrentChatId,loadChats,messages,setMessages
         const textResponse = response.chunkResults.map((chunkResult,index)=>{
             return `
 Result - ${index+1}
+score - ${chunkResult.score}
 ${chunkResult.text}
             `
         })
