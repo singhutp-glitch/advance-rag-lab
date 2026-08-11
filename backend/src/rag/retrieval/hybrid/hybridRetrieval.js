@@ -3,8 +3,8 @@ import { retrieveDense } from "../dense/denseRetrieval.js";
 import { reciprocalRankFusion } from "./rrf.js";
 
 export async function retrieveHybrid(query,chatId, topK = 10) {
-    const denseChunkResults = await retrieveDense(query,chatId);
-    const bm25ChunkResults = await retrieveBM25(query,chatId);
+    const denseChunkResults = await retrieveDense(query,chatId,20);
+    const bm25ChunkResults = await retrieveBM25(query,chatId,20);
 
     const hybridChunkResults = await reciprocalRankFusion([
         denseChunkResults,
@@ -23,7 +23,7 @@ export async function retrieveHybrid(query,chatId, topK = 10) {
                 rank: result.rank,
                 text: chunk.text,
                 sectionHeading: chunk.sectionHeading,
-                documentName: chunk.originalFileName
+                originalFileName: chunk.originalFileName
             };
         });
  

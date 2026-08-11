@@ -266,6 +266,7 @@ const Main = ({currentChatId,setCurrentChatId,loadChats,messages,setMessages
         const textResponse = response.chunkResults.map((chunkResult,index)=>{
             return `
 Result - ${index+1}
+File - ${chunkResult.originalFileName}
 score - ${chunkResult.score}
 ${chunkResult.text}
             `
