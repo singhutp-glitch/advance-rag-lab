@@ -2,6 +2,7 @@ import { generateQueryEmbeddings } from "../embeddings/queryEmbedding.js";
 import { retrieveChunks } from "../services/retrievelService.js";
 import { searchChatIdwithUserId } from "../../services/databaseService.js";
 import { retrieveBM25 } from "../retrieval/bm25/bm25Retieval.js";
+import { retrieveDense } from "../retrieval/dense/denseRetrieval.js";
 
 export async function getChunks(req,res){
      try{
@@ -27,10 +28,7 @@ export async function getChunks(req,res){
                 });
             }
 
-            // const queryEmbedding = await generateQueryEmbeddings(query);
-            // const chunkResults = await retrieveChunks(queryEmbedding,chatId);
-
-            const chunkResults = await retrieveBM25(query,chatId);
+            const chunkResults = await retrieveDense(query,chatId);
 
                 res.status(200).json({
                     message:'Retrieval successful',
