@@ -4,6 +4,7 @@ import { searchChatIdwithUserId } from "../../services/databaseService.js";
 import { retrieveBM25 } from "../retrieval/bm25/bm25Retieval.js";
 import { retrieveDense } from "../retrieval/dense/denseRetrieval.js";
 import { retrieveHybrid } from "../retrieval/hybrid/hybridRetrieval.js";
+import { storeRetrievalResult } from "../../evaluation/storeRetrievalResults.js";
 
 export async function getChunks(req,res){
      try{
@@ -30,6 +31,10 @@ export async function getChunks(req,res){
             }
 
             const chunkResults = await retrieveHybrid(query,chatId);
+            await storeRetrievalResult({
+                queryId:'cot_q',
+                queryText:query,
+                retrievedChunks:chunkResults});
 
                 res.status(200).json({
                     message:'Retrieval successful',
