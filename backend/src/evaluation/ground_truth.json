@@ -2,15 +2,23 @@
   "query_id": "cot_q1",
   "relevant_chunks": [
     {
-      "chunk_id": 342,
+      "chunk_id": 525,
       "relevance": 3
     },
     {
-      "chunk_id": 326,
+      "chunk_id": 515,
       "relevance": 3
     },
     {
-      "chunk_id": 343,
+      "chunk_id": 523,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 528,
+      "relevance": 1
+    },
+    {
+      "chunk_id": 526,
       "relevance": 1
     }
   ]

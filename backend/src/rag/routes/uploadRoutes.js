@@ -1,7 +1,7 @@
 import express from "express";
 import upload from "../upload/multerConfig.js";
 import postUploadDocument from "../controllers/uploadController.js";
-import { getChunks } from "../controllers/retrievelController.js";
+import { getChunks } from "../controllers/retrievalController.js";
 import { authMiddleware } from "../../middleware/authMiddleware.js";
 
 const router = express.Router();

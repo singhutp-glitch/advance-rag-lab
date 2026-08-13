@@ -31,10 +31,10 @@ export async function getChunks(req,res){
             }
 
             const chunkResults = await retrieveHybrid(query,chatId);
-            await storeRetrievalResult({
-                queryId:'cot_q',
-                queryText:query,
-                retrievedChunks:chunkResults});
+            // await storeRetrievalResult({
+            //     queryId:'cot_q',
+            //     queryText:query,
+            //     retrievedChunks:chunkResults});
 
                 res.status(200).json({
                     message:'Retrieval successful',
