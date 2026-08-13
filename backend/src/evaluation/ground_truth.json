@@ -1,0 +1,323 @@
+[{
+  "query_id": "cot_q1",
+  "relevant_chunks": [
+    {
+      "chunk_id": 342,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 326,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 343,
+      "relevance": 1
+    }
+  ]
+},
+{
+  "query_id": "cot_q2",
+  "relevant_chunks": [
+    {
+      "chunk_id": 523,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 518,
+      "relevance": 1
+    },
+    {
+      "chunk_id": 522,
+      "relevance": 1
+    },
+    {
+      "chunk_id": 524,
+      "relevance": 1
+    },
+    {
+      "chunk_id": 519,
+      "relevance": 1
+    }
+  ]
+},
+{
+  "query_id": "cot_q3",
+  "relevant_chunks": [
+    {
+      "chunk_id": 528,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 527,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 525,
+      "relevance": 1
+    },
+    {
+      "chunk_id": 571,
+      "relevance": 1
+    },
+    {
+      "chunk_id": 579,
+      "relevance": 1
+    }
+  ]
+},
+{
+  "query_id": "cot_q4",
+  "relevant_chunks": [
+    {
+      "chunk_id": 537,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 579,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 574,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 542,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 515,
+      "relevance": 3
+    }
+  ]
+},
+{
+  "query_id": "cot_q5",
+  "relevant_chunks": [
+    {
+      "chunk_id": 544,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 545,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 546,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 547,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 548,
+      "relevance": 1
+    }
+  ]
+},
+{
+  "query_id": "cot_q6",
+  "relevant_chunks": [
+    {
+      "chunk_id": 528,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 546,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 525,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 515,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 577,
+      "relevance": 1
+    }
+  ]
+},
+{
+  "query_id": "cot_q7",
+  "relevant_chunks": [
+    {
+      "chunk_id": 546,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 547,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 545,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 577,
+      "relevance": 1
+    },
+    {
+      "chunk_id": 528,
+      "relevance": 1
+    }
+  ]
+},
+{
+  "query_id": "cot_q8",
+  "relevant_chunks": [
+    { "chunk_id": 538, "relevance": 3 },
+    { "chunk_id": 524, "relevance": 1 },
+    { "chunk_id": 516, "relevance": 1 },
+    { "chunk_id": 559, "relevance": 1 },
+    { "chunk_id": 542, "relevance": 1 }
+  ]
+},
+{
+  "query_id": "cot_q9",
+  "relevant_chunks": [
+    { "chunk_id": 537, "relevance": 3 },
+    { "chunk_id": 569, "relevance": 3 },
+    { "chunk_id": 574, "relevance": 1 },
+    { "chunk_id": 579, "relevance": 1 },
+    { "chunk_id": 515, "relevance": 1 }
+  ]
+},
+{
+  "query_id": "cot_q10",
+  "relevant_chunks": [
+    { "chunk_id": 570, "relevance": 3 },
+    { "chunk_id": 562, "relevance": 3 },
+    { "chunk_id": 571, "relevance": 3 },
+    { "chunk_id": 579, "relevance": 1 },
+    { "chunk_id": 574, "relevance": 1 }
+  ]
+},
+{
+  "query_id": "cot_q11",
+  "relevant_chunks": [
+    {
+      "chunk_id": 523,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 525,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 515,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 519,
+      "relevance": 1
+    },
+    {
+      "chunk_id": 524,
+      "relevance": 1
+    }
+  ]
+},
+{
+  "query_id": "cot_q12",
+  "relevant_chunks": [
+    {
+      "chunk_id": 516,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 524,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 521,
+      "relevance": 1
+    },
+    {
+      "chunk_id": 539,
+      "relevance": 1
+    },
+    {
+      "chunk_id": 530,
+      "relevance": 1
+    }
+  ]
+},
+{
+  "query_id": "cot_q13",
+  "relevant_chunks": [
+    {
+      "chunk_id": 540,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 543,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 526,
+      "relevance": 1
+    },
+    {
+      "chunk_id": 575,
+      "relevance": 1
+    },
+    {
+      "chunk_id": 569,
+      "relevance": 1
+    }
+  ]
+},
+{
+  "query_id": "cot_q14",
+  "relevant_chunks": [
+    {
+      "chunk_id": 550,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 549,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 554,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 555,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 552,
+      "relevance": 1
+    }
+  ]
+},
+{
+  "query_id": "cot_q15",
+  "relevant_chunks": [
+    {
+      "chunk_id": 575,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 537,
+      "relevance": 1
+    },
+    {
+      "chunk_id": 574,
+      "relevance": 1
+    },
+    {
+      "chunk_id": 579,
+      "relevance": 1
+    },
+    {
+      "chunk_id": 515,
+      "relevance": 1
+    }
+  ]
+}
+]

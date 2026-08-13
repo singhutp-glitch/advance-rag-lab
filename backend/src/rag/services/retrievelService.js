@@ -13,6 +13,6 @@ export async function retrieveChunks(queryEmbedding,chatId) {
                 ON D.id = C."documentId"
                 WHERE D."chatId" = ${chatId}
                 ORDER BY score
-                LIMIT 5
+                LIMIT 10
             `;
 };

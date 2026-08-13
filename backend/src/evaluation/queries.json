@@ -1,0 +1,77 @@
+[
+  {
+    "query_id": "cot_q1",
+    "type": "lexical",
+    "query": "What is chain-of-thought prompting and what does a chain of thought consist of?"
+  },
+  {
+    "query_id": "cot_q2",
+    "type": "lexical",
+    "query": "What are the limitations of rationale-augmented training and traditional few-shot prompting?"
+  },
+  {
+    "query_id": "cot_q3",
+    "type": "lexical",
+    "query": "What are the attractive properties of chain-of-thought reasoning?"
+  },
+  {
+    "query_id": "cot_q4",
+    "type": "lexical",
+    "query": "What does the paper say about chain-of-thought being an emergent ability of model scale?"
+  },
+  {
+    "query_id": "cot_q5",
+    "type": "lexical",
+    "query": "What variations of chain-of-thought prompting are evaluated in the ablation study?"
+  },
+  {
+    "query_id": "cot_q6",
+    "type": "dense",
+    "query": "Why might asking a language model to explicitly work through a problem step by step improve its ability to solve difficult tasks?"
+  },
+  {
+    "query_id": "cot_q7",
+    "type": "dense",
+    "query": "What does the paper suggest about why expressing intermediate reasoning in natural language is useful?"
+  },
+  {
+    "query_id": "cot_q8",
+    "type": "dense",
+    "query": "On what kind of problems does the reasoning approach provide the largest performance improvements?"
+  },
+  {
+    "query_id": "cot_q9",
+    "type": "dense",
+    "query": "At approximately what model size does the ability to benefit from this reasoning technique begin to appear?"
+  },
+  {
+    "query_id": "cot_q10",
+    "type": "dense",
+    "query": "How does the reasoning method affect a model's ability to handle problems requiring longer sequences of steps than those seen in its examples?"
+  },
+  {
+    "query_id": "cot_q11",
+    "type": "mixed",
+    "query": "How does chain-of-thought prompting combine few-shot learning with intermediate reasoning steps?"
+  },
+  {
+    "query_id": "cot_q12",
+    "type": "mixed",
+    "query": "How did chain-of-thought prompting affect PaLM 540B's performance on GSM8K compared with standard prompting?"
+  },
+  {
+    "query_id": "cot_q13",
+    "type": "mixed",
+    "query": "What did the researchers find when they manually examined cases where the model produced correct and incorrect answers?"
+  },
+  {
+    "query_id": "cot_q14",
+    "type": "mixed",
+    "query": "How robust was the method when different people wrote the reasoning examples used for prompting?"
+  },
+  {
+    "query_id": "cot_q15",
+    "type": "mixed",
+    "query": "What limitation does the paper identify regarding the cost of deploying reasoning capabilities in real-world applications?"
+  }
+]
