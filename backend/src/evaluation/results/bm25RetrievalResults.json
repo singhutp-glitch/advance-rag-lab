@@ -1,0 +1,242 @@
+[
+  {
+    "query_id": "cot_q1",
+    "query": "What is chain-of-thought prompting and what does a chain of thought consist of?",
+    "retrieved_chunks": [
+      523,
+      527,
+      547,
+      570,
+      551,
+      529,
+      534,
+      555,
+      554,
+      571
+    ]
+  },
+  {
+    "query_id": "cot_q2",
+    "query": "What are the limitations of rationale-augmented training and traditional few-shot prompting?",
+    "retrieved_chunks": [
+      523,
+      534,
+      578,
+      558,
+      575,
+      568,
+      519,
+      524,
+      552,
+      522
+    ]
+  },
+  {
+    "query_id": "cot_q3",
+    "query": "What are the attractive properties of chain-of-thought reasoning?",
+    "retrieved_chunks": [
+      527,
+      579,
+      529,
+      571,
+      528,
+      547,
+      515,
+      517,
+      525,
+      555
+    ]
+  },
+  {
+    "query_id": "cot_q4",
+    "query": "What does the paper say about chain-of-thought being an emergent ability of model scale?",
+    "retrieved_chunks": [
+      537,
+      542,
+      574,
+      515,
+      579,
+      523,
+      543,
+      525,
+      570,
+      559
+    ]
+  },
+  {
+    "query_id": "cot_q5",
+    "query": "What variations of chain-of-thought prompting are evaluated in the ablation study?",
+    "retrieved_chunks": [
+      544,
+      545,
+      548,
+      547,
+      546,
+      534,
+      570,
+      550,
+      571,
+      558
+    ]
+  },
+  {
+    "query_id": "cot_q6",
+    "query": "Why might asking a language model to explicitly work through a problem step by step improve its ability to solve difficult tasks?",
+    "retrieved_chunks": [
+      525,
+      528,
+      577,
+      574,
+      545,
+      515,
+      538,
+      523,
+      519,
+      546
+    ]
+  },
+  {
+    "query_id": "cot_q7",
+    "query": "What does the paper suggest about why expressing intermediate reasoning in natural language is useful?",
+    "retrieved_chunks": [
+      546,
+      577,
+      519,
+      523,
+      515,
+      525,
+      528,
+      571,
+      786,
+      556
+    ]
+  },
+  {
+    "query_id": "cot_q8",
+    "query": "On what kind of problems does the reasoning approach provide the largest performance improvements?",
+    "retrieved_chunks": [
+      538,
+      559,
+      515,
+      528,
+      516,
+      543,
+      525,
+      579,
+      574,
+      545
+    ]
+  },
+  {
+    "query_id": "cot_q9",
+    "query": "At approximately what model size does the ability to benefit from this reasoning technique begin to appear?",
+    "retrieved_chunks": [
+      519,
+      518,
+      559,
+      530,
+      560,
+      574,
+      515,
+      537,
+      546,
+      547
+    ]
+  },
+  {
+    "query_id": "cot_q10",
+    "query": "How does the reasoning method affect a model's ability to handle problems requiring longer sequences of steps than those seen in its examples?",
+    "retrieved_chunks": [
+      528,
+      525,
+      515,
+      523,
+      567,
+      562,
+      546,
+      519,
+      571,
+      577
+    ]
+  },
+  {
+    "query_id": "cot_q11",
+    "query": "How does chain-of-thought prompting combine few-shot learning with intermediate reasoning steps?",
+    "retrieved_chunks": [
+      523,
+      525,
+      528,
+      515,
+      546,
+      545,
+      571,
+      534,
+      552,
+      569
+    ]
+  },
+  {
+    "query_id": "cot_q12",
+    "query": "How did chain-of-thought prompting affect PaLM 540B's performance on GSM8K compared with standard prompting?",
+    "retrieved_chunks": [
+      539,
+      520,
+      552,
+      559,
+      524,
+      516,
+      521,
+      569,
+      538,
+      570
+    ]
+  },
+  {
+    "query_id": "cot_q13",
+    "query": "What did the researchers find when they manually examined cases where the model produced correct and incorrect answers?",
+    "retrieved_chunks": [
+      540,
+      575,
+      526,
+      747,
+      748,
+      547,
+      545,
+      754,
+      572,
+      742
+    ]
+  },
+  {
+    "query_id": "cot_q14",
+    "query": "How robust was the method when different people wrote the reasoning examples used for prompting?",
+    "retrieved_chunks": [
+      554,
+      549,
+      555,
+      523,
+      552,
+      571,
+      550,
+      558,
+      515,
+      568
+    ]
+  },
+  {
+    "query_id": "cot_q15",
+    "query": "What limitation does the paper identify regarding the cost of deploying reasoning capabilities in real-world applications?",
+    "retrieved_chunks": [
+      575,
+      523,
+      756,
+      556,
+      571,
+      561,
+      608,
+      742,
+      785,
+      783
+    ]
+  }
+]

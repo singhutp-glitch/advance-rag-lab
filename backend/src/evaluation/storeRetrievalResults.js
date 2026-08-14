@@ -2,7 +2,7 @@ import { readFile, writeFile } from "fs/promises";
 import path from "path";
 
 const resultsFilePath = new URL(
-  "./results/denseRetrievalResults.json",
+  "./results/bm25RetrievalResults.json",
   import.meta.url
 );
 
@@ -31,9 +31,9 @@ export async function storeRetrievalResult({
   }
 
   const resultObject = {
-    query_id: queryId+ `${+results.at(-1)["query_id"].slice(10) + 1}`,
+    query_id: queryId+ `${+results.at(-1)["query_id"].slice(5) + 1}`,
     query: queryText,
-    retrieved_chunks: retrievedChunks.map(chunk => chunk.chunkId)
+    retrieved_chunks: retrievedChunks.map(chunk => chunk.id)
   };
 
   results.push(resultObject);

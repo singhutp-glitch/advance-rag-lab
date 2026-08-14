@@ -12,7 +12,7 @@ const groundTruthPath = path.resolve(
 
 const retrievalResultsPath = path.resolve(
     __dirname,
-    "./results/hybridRetrievalResults.json"
+    "./results/denseRetrievalResults.json"
 );
 
 async function calculatePrecision() {
