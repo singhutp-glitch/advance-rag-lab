@@ -238,5 +238,245 @@
       516,
       608
     ]
+  },
+  {
+    "query_id": "crossing_q1",
+    "query": "Why does the author argue that a less successful high-tech product can sometimes be feature-for-feature superior to the product that beats it?",
+    "retrieved_chunks": [
+      588,
+      585,
+      607,
+      596,
+      595,
+      594,
+      637,
+      604,
+      591,
+      599
+    ]
+  },
+  {
+    "query_id": "crossing_q2",
+    "query": "Why does the author say the default model for developing a high-tech market is almost—but not quite—right?",
+    "retrieved_chunks": [
+      596,
+      595,
+      632,
+      623,
+      599,
+      607,
+      605,
+      630,
+      604,
+      616
+    ]
+  },
+  {
+    "query_id": "crossing_q3",
+    "query": "What is the chasm in high-tech marketing?",
+    "retrieved_chunks": [
+      599,
+      632,
+      612,
+      623,
+      616,
+      605,
+      607,
+      620,
+      604,
+      628
+    ]
+  },
+  {
+    "query_id": "crossing_q4",
+    "query": "What does the author say about whether the chasm can be crossed successfully?",
+    "retrieved_chunks": [
+      612,
+      587,
+      598,
+      610,
+      600,
+      599,
+      620,
+      628,
+      608,
+      613
+    ]
+  },
+  {
+    "query_id": "crossing_q5",
+    "query": "What is the Technology Adoption Life Cycle and what does it describe?",
+    "retrieved_chunks": [
+      631,
+      619,
+      627,
+      624,
+      633,
+      620,
+      623,
+      634,
+      632,
+      630
+    ]
+  },
+  {
+    "query_id": "crossing_q6",
+    "query": "Why is moving a technology from early enthusiasts to ordinary mainstream buyers especially dangerous for a company?",
+    "retrieved_chunks": [
+      599,
+      600,
+      624,
+      635,
+      627,
+      618,
+      633,
+      605,
+      632,
+      616
+    ]
+  },
+  {
+    "query_id": "crossing_q7",
+    "query": "What happens to the people and organizations involved when a high-tech venture fails?",
+    "retrieved_chunks": [
+      590,
+      591,
+      596,
+      623,
+      632,
+      604,
+      630,
+      599,
+      594,
+      595
+    ]
+  },
+  {
+    "query_id": "crossing_q8",
+    "query": "Why does the author consider predictable success in bringing technology products to market important for the broader economy?",
+    "retrieved_chunks": [
+      594,
+      611,
+      596,
+      637,
+      595,
+      631,
+      623,
+      600,
+      632,
+      621
+    ]
+  },
+  {
+    "query_id": "crossing_q9",
+    "query": "How does the author distinguish improvements that preserve existing behavior from innovations that force customers to change how they operate?",
+    "retrieved_chunks": [
+      625,
+      621,
+      626,
+      622,
+      629,
+      636,
+      630,
+      749,
+      616,
+      624
+    ]
+  },
+  {
+    "query_id": "crossing_q10",
+    "query": "What has to happen for a new technology to move from enthusiastic early adoption into a repeatable mainstream business?",
+    "retrieved_chunks": [
+      627,
+      635,
+      633,
+      618,
+      624,
+      629,
+      619,
+      637,
+      623,
+      631
+    ]
+  },
+  {
+    "query_id": "crossing_q11",
+    "query": "Who are the main customer groups on the early-market and mainstream-market sides of the chasm?",
+    "retrieved_chunks": [
+      599,
+      612,
+      636,
+      605,
+      616,
+      628,
+      600,
+      620,
+      611,
+      630
+    ]
+  },
+  {
+    "query_id": "crossing_q12",
+    "query": "Why does crossing the chasm require everyone in the company—not just marketing and sales—to focus on the same objective?",
+    "retrieved_chunks": [
+      604,
+      613,
+      599,
+      612,
+      587,
+      620,
+      628,
+      600,
+      601,
+      616
+    ]
+  },
+  {
+    "query_id": "crossing_q13",
+    "query": "How does the author use the distinction between a fad and a trend to explain the challenge of marketing innovative high-tech products?",
+    "retrieved_chunks": [
+      605,
+      607,
+      632,
+      623,
+      599,
+      630,
+      612,
+      596,
+      636,
+      595
+    ]
+  },
+  {
+    "query_id": "crossing_q14",
+    "query": "What does the author recommend companies prioritize during the crossing period: exceptional marketing ideas or organizational unity and disciplined execution?",
+    "retrieved_chunks": [
+      613,
+      604,
+      600,
+      614,
+      599,
+      612,
+      620,
+      601,
+      628,
+      746
+    ]
+  },
+  {
+    "query_id": "crossing_q15",
+    "query": "Why does the Technology Adoption Life Cycle divide technology customers into different groups?",
+    "retrieved_chunks": [
+      636,
+      624,
+      631,
+      619,
+      632,
+      623,
+      627,
+      628,
+      620,
+      633
+    ]
   }
 ]
