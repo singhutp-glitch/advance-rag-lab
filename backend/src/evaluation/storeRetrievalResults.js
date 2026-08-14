@@ -2,7 +2,7 @@ import { readFile, writeFile } from "fs/promises";
 import path from "path";
 
 const resultsFilePath = new URL(
-  "./results/retrievalResults.json",
+  "./results/hybridRetrievalResults.json",
   import.meta.url
 );
 
