@@ -268,6 +268,7 @@ const Main = ({currentChatId,setCurrentChatId,loadChats,messages,setMessages
 Result - ${index+1}
 chunk id - ${chunkResult.chunkId}
 File - ${chunkResult.originalFileName}
+type - ${chunkResult.type}
 score - ${chunkResult.score}
 Section - ${chunkResult.sectionHeading}
 ${chunkResult.text}

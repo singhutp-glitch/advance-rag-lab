@@ -52,7 +52,8 @@ export async function retrieveBM25(query,chatId, topK = 10) {
         rank: index + 1,
         text: chunk.text,
         sectionHeading: chunk.sectionHeading,
-        originalFileName: chunk.document.originalFileName
+        originalFileName: chunk.document.originalFileName,
+        type:chunk.type
     };
 });
 }

@@ -23,7 +23,8 @@ export async function retrieveHybrid(query,chatId, topK = 10) {
                 rank: result.rank,
                 text: chunk.text,
                 sectionHeading: chunk.sectionHeading,
-                originalFileName: chunk.originalFileName
+                originalFileName: chunk.originalFileName,
+                type:chunk.type
             };
         });
  

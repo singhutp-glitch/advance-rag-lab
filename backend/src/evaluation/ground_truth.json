@@ -702,5 +702,352 @@
       "relevance": 1
     }
   ]
+},
+{
+  "query_id": "mckinsey_q1",
+  "relevant_chunks": [
+    {
+      "chunk_id": 740,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 742,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 741,
+      "relevance": 1
+    },
+    {
+      "chunk_id": 747,
+      "relevance": 1
+    },
+    {
+      "chunk_id": 749,
+      "relevance": 1
+    }
+  ]
+},
+{
+  "query_id": "mckinsey_q2",
+  "relevant_chunks": [
+    {
+      "chunk_id": 743,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 746,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 750,
+      "relevance": 1
+    }
+  ]
+},
+{
+  "query_id": "mckinsey_q3",
+  "relevant_chunks": [
+    {
+      "chunk_id": 748,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 750,
+      "relevance": 1
+    },
+    {
+      "chunk_id": 754,
+      "relevance": 1
+    },
+    {
+      "chunk_id": 740,
+      "relevance": 1
+    },
+    {
+      "chunk_id": 755,
+      "relevance": 1
+    }
+  ]
+},
+{
+  "query_id": "mckinsey_q4",
+  "relevant_chunks": [
+    {
+      "chunk_id": 755,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 754,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 742,
+      "relevance": 1
+    },
+    {
+      "chunk_id": 747,
+      "relevance": 1
+    },
+    {
+      "chunk_id": 750,
+      "relevance": 1
+    }
+  ]
+},
+{
+  "query_id": "mckinsey_q5",
+  "relevant_chunks": [
+    {
+      "chunk_id": 784,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 758,
+      "relevance": 1
+    },
+    {
+      "chunk_id": 785,
+      "relevance": 1
+    },
+    {
+      "chunk_id": 780,
+      "relevance": 1
+    }
+  ]
+},
+{
+  "query_id": "mckinsey_q6",
+  "relevant_chunks": [
+    {
+      "chunk_id": 749,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 753,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 742,
+      "relevance": 1
+    },
+    {
+      "chunk_id": 740,
+      "relevance": 1
+    },
+    {
+      "chunk_id": 751,
+      "relevance": 1
+    }
+  ]
+},
+{
+  "query_id": "mckinsey_q7",
+  "relevant_chunks": [
+    {
+      "chunk_id": 750,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 753,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 748,
+      "relevance": 1
+    },
+    {
+      "chunk_id": 740,
+      "relevance": 1
+    },
+    {
+      "chunk_id": 749,
+      "relevance": 1
+    }
+  ]
+},
+{
+  "query_id": "mckinsey_q8",
+  "relevant_chunks": [
+    {
+      "chunk_id": 763,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 771,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 773,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 774,
+      "relevance": 1
+    },
+    {
+      "chunk_id": 775,
+      "relevance": 1
+    }
+  ]
+},
+{
+  "query_id": "mckinsey_q9",
+  "relevant_chunks": [
+    {
+      "chunk_id": 786,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 785,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 779,
+      "relevance": 1
+    }
+  ]
+},
+{
+  "query_id": "mckinsey_q10",
+  "relevant_chunks": [
+    {
+      "chunk_id": 780,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 763,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 779,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 767,
+      "relevance": 1
+    }
+  ]
+},
+{
+  "query_id": "mckinsey_q11",
+  "relevant_chunks": [
+    {
+      "chunk_id": 740,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 742,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 741,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 747,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 753,
+      "relevance": 1
+    }
+  ]
+},
+{
+  "query_id": "mckinsey_q12",
+  "relevant_chunks": [
+    {
+      "chunk_id": 747,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 753,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 750,
+      "relevance": 1
+    },
+    {
+      "chunk_id": 751,
+      "relevance": 1
+    },
+    {
+      "chunk_id": 742,
+      "relevance": 1
+    }
+  ]
+},
+{
+  "query_id": "mckinsey_q13",
+  "relevant_chunks": [
+    {
+      "chunk_id": 785,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 782,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 783,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 781,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 780,
+      "relevance": 1
+    }
+  ]
+},
+{
+  "query_id": "mckinsey_q14",
+  "relevant_chunks": [
+    {
+      "chunk_id": 763,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 772,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 771,
+      "relevance": 1
+    },
+    {
+      "chunk_id": 773,
+      "relevance": 1
+    }
+  ]
+},
+{
+  "query_id": "mckinsey_q15",
+  "relevant_chunks": [
+    {
+      "chunk_id": 780,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 784,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 785,
+      "relevance": 1
+    },
+    {
+      "chunk_id": 781,
+      "relevance": 1
+    },
+    {
+      "chunk_id": 758,
+      "relevance": 1
+    }
+  ]
 }
 ]
