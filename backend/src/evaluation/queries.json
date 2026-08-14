@@ -73,5 +73,82 @@
     "query_id": "cot_q15",
     "type": "mixed",
     "query": "What limitation does the paper identify regarding the cost of deploying reasoning capabilities in real-world applications?"
+  },
+  {
+    "query_id": "crossing_q1",
+    "type": "lexical",
+    "query": "Why does the author argue that a less successful high-tech product can sometimes be feature-for-feature superior to the product that beats it?"
+  },
+  {
+    "query_id": "crossing_q2",
+    "type": "lexical",
+    "query": "Why does the author say the default model for developing a high-tech market is almost—but not quite—right?"
+  },
+  {
+    "query_id": "crossing_q3",
+    "type": "lexical",
+    "query": "What is the chasm in high-tech marketing?"
+  },
+  {
+    "query_id": "crossing_q4",
+    "type": "lexical",
+    "query": "What does the author say about whether the chasm can be crossed successfully?"
+  },
+  {
+    "query_id": "crossing_q5",
+    "type": "lexical",
+    "query": "What is the Technology Adoption Life Cycle and what does it describe?"
+  },
+  {
+    "query_id": "crossing_q6",
+    "type": "dense",
+    "query": "Why is moving a technology from early enthusiasts to ordinary mainstream buyers especially dangerous for a company?"
+  },
+  {
+    "query_id": "crossing_q7",
+    "type": "dense",
+    "query": "What happens to the people and organizations involved when a high-tech venture fails?"
+  },
+  {
+    "query_id": "crossing_q8",
+    "type": "dense",
+    "query": "Why does the author consider predictable success in bringing technology products to market important for the broader economy?"
+  },
+  {
+    "query_id": "crossing_q9",
+    "type": "dense",
+    "query": "How does the author distinguish improvements that preserve existing behavior from innovations that force customers to change how they operate?"
+  },
+  {
+    "query_id": "crossing_q10",
+    "type": "dense",
+    "query": "What has to happen for a new technology to move from enthusiastic early adoption into a repeatable mainstream business?"
+  },
+  {
+    "query_id": "crossing_q11",
+    "type": "mixed",
+    "query": "Who are the main customer groups on the early-market and mainstream-market sides of the chasm?"
+  },
+  {
+    "query_id": "crossing_q12",
+    "type": "mixed",
+    "query": "Why does crossing the chasm require everyone in the company—not just marketing and sales—to focus on the same objective?"
+  },
+  {
+    "query_id": "crossing_q13",
+    "type": "mixed",
+    "query": "How does the author use the distinction between a fad and a trend to explain the challenge of marketing innovative high-tech products?"
+  },
+  {
+    "query_id": "crossing_q14",
+    "type": "mixed",
+    "query": "What does the author recommend companies prioritize during the crossing period: exceptional marketing ideas or organizational unity and disciplined execution?"
+  },
+  {
+    "query_id": "crossing_q15",
+    "type": "mixed",
+    "query": "Why does the Technology Adoption Life Cycle divide technology customers into different groups?"
   }
+
 ]
+
