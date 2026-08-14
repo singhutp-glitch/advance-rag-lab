@@ -327,5 +327,380 @@
       "relevance": 1
     }
   ]
+},
+{
+  "query_id": "crossing_q1",
+  "relevant_chunks": [
+    {
+      "chunk_id": 588,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 585,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 589,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 599,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 596,
+      "relevance": 1
+    }
+  ]
+},
+{
+  "query_id": "crossing_q2",
+  "relevant_chunks": [
+    {
+      "chunk_id": 596,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 599,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 595,
+      "relevance": 1
+    },
+    {
+      "chunk_id": 605,
+      "relevance": 1
+    },
+    {
+      "chunk_id": 607,
+      "relevance": 1
+    }
+  ]
+},
+{
+  "query_id": "crossing_q3",
+  "relevant_chunks": [
+    {
+      "chunk_id": 599,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 612,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 604,
+      "relevance": 1
+    },
+    {
+      "chunk_id": 605,
+      "relevance": 1
+    },
+    {
+      "chunk_id": 613,
+      "relevance": 1
+    }
+  ]
+},
+{
+  "query_id": "crossing_q4",
+  "relevant_chunks": [
+    {
+      "chunk_id": 600,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 612,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 613,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 604,
+      "relevance": 1
+    },
+    {
+      "chunk_id": 599,
+      "relevance": 1
+    }
+  ]
+},
+{
+  "query_id": "crossing_q5",
+  "relevant_chunks": [
+    {
+      "chunk_id": 631,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 630,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 618,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 636,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 621,
+      "relevance": 1
+    }
+  ]
+},
+{
+  "query_id": "crossing_q6",
+  "relevant_chunks": [
+    {
+      "chunk_id": 599,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 612,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 604,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 596,
+      "relevance": 1
+    },
+    {
+      "chunk_id": 616,
+      "relevance": 1
+    }
+  ]
+},
+{
+  "query_id": "crossing_q7",
+  "relevant_chunks": [
+    {
+      "chunk_id": 590,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 584,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 591,
+      "relevance": 1
+    },
+    {
+      "chunk_id": 596,
+      "relevance": 1
+    },
+    {
+      "chunk_id": 594,
+      "relevance": 1
+    }
+  ]
+},
+{
+  "query_id": "crossing_q8",
+  "relevant_chunks": [
+    {
+      "chunk_id": 594,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 595,
+      "relevance": 1
+    },
+    {
+      "chunk_id": 596,
+      "relevance": 1
+    },
+    {
+      "chunk_id": 599,
+      "relevance": 1
+    },
+    {
+      "chunk_id": 607,
+      "relevance": 1
+    }
+  ]
+},
+{
+  "query_id": "crossing_q9",
+  "relevant_chunks": [
+    {
+      "chunk_id": 621,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 622,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 625,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 629,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 626,
+      "relevance": 1
+    }
+  ]
+},
+{
+  "query_id": "crossing_q10",
+  "relevant_chunks": [
+    {
+      "chunk_id": 611,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 599,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 612,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 608,
+      "relevance": 1
+    },
+    {
+      "chunk_id": 600,
+      "relevance": 1
+    }
+  ]
+},
+{
+  "query_id": "crossing_q11",
+  "relevant_chunks": [
+    {
+      "chunk_id": 599,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 612,
+      "relevance": 1
+    },
+    {
+      "chunk_id": 605,
+      "relevance": 1
+    },
+    {
+      "chunk_id": 607,
+      "relevance": 1
+    },
+    {
+      "chunk_id": 611,
+      "relevance": 1
+    }
+  ]
+},
+{
+  "query_id": "crossing_q12",
+  "relevant_chunks": [
+    {
+      "chunk_id": 604,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 613,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 614,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 601,
+      "relevance": 1
+    },
+    {
+      "chunk_id": 600,
+      "relevance": 1
+    }
+  ]
+},
+{
+  "query_id": "crossing_q13",
+  "relevant_chunks": [
+    {
+      "chunk_id": 605,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 607,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 599,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 611,
+      "relevance": 1
+    },
+    {
+      "chunk_id": 596,
+      "relevance": 1
+    }
+  ]
+},
+{
+  "query_id": "crossing_q14",
+  "relevant_chunks": [
+    {
+      "chunk_id": 613,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 614,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 604,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 600,
+      "relevance": 1
+    },
+    {
+      "chunk_id": 612,
+      "relevance": 1
+    }
+  ]
+},
+{
+  "query_id": "crossing_q15",
+  "relevant_chunks": [
+    {
+      "chunk_id": 636,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 630,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 631,
+      "relevance": 3
+    },
+    {
+      "chunk_id": 621,
+      "relevance": 1
+    },
+    {
+      "chunk_id": 637,
+      "relevance": 1
+    }
+  ]
 }
 ]
