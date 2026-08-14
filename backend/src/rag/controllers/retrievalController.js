@@ -30,9 +30,9 @@ export async function getChunks(req,res){
                 });
             }
 
-            const chunkResults = await retrieveHybrid(query,chatId);
+            const chunkResults = await retrieveDense(query,chatId);
             await storeRetrievalResult({
-                queryId:'mckinsey_q',
+                queryId:'cot_q',
                 queryText:query,
                 retrievedChunks:chunkResults});
 
