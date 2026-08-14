@@ -32,7 +32,7 @@ export async function getChunks(req,res){
 
             const chunkResults = await retrieveDense(query,chatId);
             await storeRetrievalResult({
-                queryId:'cot_q',
+                queryId:'crossing_q',
                 queryText:query,
                 retrievedChunks:chunkResults});
 
