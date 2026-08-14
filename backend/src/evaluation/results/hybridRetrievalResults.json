@@ -478,5 +478,245 @@
       620,
       633
     ]
+  },
+  {
+    "query_id": "mckinsey_q1",
+    "query": "What was the overall objective of McKinsey's assessment of the economic impact of generative AI and foundation models?",
+    "retrieved_chunks": [
+      740,
+      742,
+      756,
+      753,
+      747,
+      780,
+      757,
+      741,
+      754,
+      750
+    ]
+  },
+  {
+    "query_id": "mckinsey_q2",
+    "query": "What business functions are included in McKinsey's analysis of generative AI use cases?",
+    "retrieved_chunks": [
+      747,
+      742,
+      740,
+      748,
+      741,
+      753,
+      780,
+      746,
+      750,
+      785
+    ]
+  },
+  {
+    "query_id": "mckinsey_q3",
+    "query": "What types of benefits are excluded from McKinsey's direct impact analysis of generative AI?",
+    "retrieved_chunks": [
+      748,
+      742,
+      755,
+      747,
+      750,
+      740,
+      741,
+      753,
+      752,
+      766
+    ]
+  },
+  {
+    "query_id": "mckinsey_q4",
+    "query": "What limitations does McKinsey identify about its estimates of the economic impact of generative AI?",
+    "retrieved_chunks": [
+      754,
+      755,
+      742,
+      740,
+      748,
+      747,
+      780,
+      751,
+      753,
+      741
+    ]
+  },
+  {
+    "query_id": "mckinsey_q5",
+    "query": "What four phases does McKinsey use in its model of automation adoption?",
+    "retrieved_chunks": [
+      784,
+      758,
+      782,
+      781,
+      785,
+      780,
+      760,
+      630,
+      742,
+      787
+    ]
+  },
+  {
+    "query_id": "mckinsey_q6",
+    "query": "How did the researchers move from individual examples of AI use to an estimate for entire industries?",
+    "retrieved_chunks": [
+      753,
+      742,
+      749,
+      747,
+      752,
+      740,
+      751,
+      750,
+      741,
+      757
+    ]
+  },
+  {
+    "query_id": "mckinsey_q7",
+    "query": "Why would the analysis leave certain business expenses out when calculating the productivity opportunity from AI?",
+    "retrieved_chunks": [
+      748,
+      740,
+      750,
+      747,
+      754,
+      755,
+      745,
+      743,
+      629,
+      751
+    ]
+  },
+  {
+    "query_id": "mckinsey_q8",
+    "query": "How widespread could the effects of large language models be across the US workforce according to the cited research?",
+    "retrieved_chunks": [
+      771,
+      779,
+      514,
+      773,
+      764,
+      515,
+      765,
+      519,
+      763,
+      781
+    ]
+  },
+  {
+    "query_id": "mckinsey_q9",
+    "query": "Which human capabilities does the report identify as being especially relevant to tasks that generative AI may automate?",
+    "retrieved_chunks": [
+      785,
+      763,
+      767,
+      779,
+      765,
+      782,
+      761,
+      758,
+      760,
+      780
+    ]
+  },
+  {
+    "query_id": "mckinsey_q10",
+    "query": "Which kinds of workers are expected to experience particularly high exposure to generative AI according to the cited research?",
+    "retrieved_chunks": [
+      779,
+      767,
+      763,
+      765,
+      773,
+      747,
+      771,
+      757,
+      785,
+      761
+    ]
+  },
+  {
+    "query_id": "mckinsey_q11",
+    "query": "Why did McKinsey use a bottom-up, use-case-based approach to estimate the value of generative AI?",
+    "retrieved_chunks": [
+      742,
+      741,
+      740,
+      747,
+      753,
+      754,
+      756,
+      750,
+      749,
+      748
+    ]
+  },
+  {
+    "query_id": "mckinsey_q12",
+    "query": "How did McKinsey estimate the potential quantitative impact of generative AI for individual business use cases?",
+    "retrieved_chunks": [
+      747,
+      742,
+      740,
+      753,
+      741,
+      754,
+      761,
+      751,
+      748,
+      752
+    ]
+  },
+  {
+    "query_id": "mckinsey_q13",
+    "query": "How did McKinsey evaluate whether generative AI could technically automate different work activities?",
+    "retrieved_chunks": [
+      785,
+      782,
+      758,
+      761,
+      781,
+      762,
+      780,
+      760,
+      742,
+      741
+    ]
+  },
+  {
+    "query_id": "mckinsey_q14",
+    "query": "How did the cited OpenAI, OpenResearch, and University of Pennsylvania study define whether a work task was exposed to an LLM?",
+    "retrieved_chunks": [
+      764,
+      771,
+      763,
+      779,
+      773,
+      765,
+      782,
+      781,
+      767,
+      565
+    ]
+  },
+  {
+    "query_id": "mckinsey_q15",
+    "query": "What factors does McKinsey consider when estimating when AI automation will actually be adopted, rather than merely being technically possible?",
+    "retrieved_chunks": [
+      758,
+      761,
+      759,
+      780,
+      760,
+      762,
+      787,
+      782,
+      784,
+      785
+    ]
   }
 ]

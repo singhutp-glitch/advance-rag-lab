@@ -32,7 +32,7 @@ export async function getChunks(req,res){
 
             const chunkResults = await retrieveHybrid(query,chatId);
             await storeRetrievalResult({
-                queryId:'crossing_q',
+                queryId:'mckinsey_q',
                 queryText:query,
                 retrievedChunks:chunkResults});
 
