@@ -31,7 +31,7 @@ export async function storeRetrievalResult({
   }
 
   const resultObject = {
-    query_id: queryId+ `${+results.at(-1)["query_id"].slice(5) + 1}`,
+    query_id: queryId+ `${+results.at(-1)["query_id"].slice(10) + 1}`,
     query: queryText,
     retrieved_chunks: retrievedChunks.map(chunk => chunk.id)
   };
