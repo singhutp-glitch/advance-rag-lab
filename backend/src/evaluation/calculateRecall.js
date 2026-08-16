@@ -12,10 +12,10 @@ const groundTruthPath = path.resolve(
 
 const retrievalResultsPath = path.resolve(
     __dirname,
-    "./results/bm25RetrievalResults.json"
+    "./results/hybridRetrievalResults.json"
 );
 
-async function calculatePrecision() {
+async function calculateRecall() {
     const groundTruth = JSON.parse(
         await fs.readFile(groundTruthPath, "utf-8")
     );
@@ -37,7 +37,8 @@ async function calculatePrecision() {
         ])
     );
 
-    let totalPrecision = 0;
+    let totalRecall = 0;
+    let evaluatedQueries = 0;
 
     for (const result of retrievalResults) {
         const queryId = result.query_id;
@@ -51,6 +52,11 @@ async function calculatePrecision() {
 
         const retrievedChunks = result.retrieved_chunks;
 
+        // All ground-truth chunks with relevance > 0
+        const relevantGroundTruthChunks = [...relevanceMap.entries()]
+            .filter(([_, relevance]) => relevance > 0)
+            .map(([chunkId]) => chunkId);
+
         let relevantRetrieved = 0;
 
         for (const chunkId of retrievedChunks) {
@@ -61,27 +67,30 @@ async function calculatePrecision() {
             }
         }
 
-        const k = retrievedChunks.length;
+        const totalRelevant = relevantGroundTruthChunks.length;
 
-        const precision = k === 0
+        const recall = totalRelevant === 0
             ? 0
-            : relevantRetrieved / k;
+            : relevantRetrieved / totalRelevant;
 
-        totalPrecision += precision;
+        totalRecall += recall;
+        evaluatedQueries++;
 
         console.log(
-            `${queryId} → Precision@${k}: ${precision.toFixed(3)}`
+            `${queryId} → Recall@${retrievedChunks.length}: ${recall.toFixed(3)}`
         );
     }
 
-    const meanPrecision =
-        totalPrecision / retrievalResults.length;
+    const meanRecall =
+        evaluatedQueries === 0
+            ? 0
+            : totalRecall / evaluatedQueries;
 
     console.log(
-        `\nMean Precision: ${meanPrecision.toFixed(4)}`
+        `\nMean Recall: ${meanRecall.toFixed(4)}`
     );
 }
 
-calculatePrecision().catch(error => {
-    console.error("Error calculating precision:", error);
+calculateRecall().catch(error => {
+    console.error("Error calculating recall:", error);
 });

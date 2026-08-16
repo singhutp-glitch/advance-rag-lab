@@ -8,7 +8,7 @@ const __dirname = path.dirname(__filename);
 const groundTruthPath = path.resolve(__dirname, "./ground_truth.json");
 const retrievalResultsPath = path.resolve(
     __dirname,
-    "./results/denseRetrievalResults.json"
+    "./results/bm25RetrievalResults.json"
 );
 
 function calculateDCG(relevances, k) {

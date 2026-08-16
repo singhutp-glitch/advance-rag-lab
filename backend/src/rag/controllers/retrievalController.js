@@ -30,11 +30,11 @@ export async function getChunks(req,res){
                 });
             }
 
-            const chunkResults = await retrieveBM25(query,chatId);
-            await storeRetrievalResult({
-                queryId:'mckinsey_q',
-                queryText:query,
-                retrievedChunks:chunkResults});
+            const chunkResults = await retrieveHybrid(query,chatId);
+            // await storeRetrievalResult({
+            //     queryId:'mckinsey_q',
+            //     queryText:query,
+            //     retrievedChunks:chunkResults});
 
                 res.status(200).json({
                     message:'Retrieval successful',
