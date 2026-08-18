@@ -15,7 +15,7 @@ const retrievalResultsPath = path.resolve(
     "./results/bm25RetrievalResults.json"
 );
 
-async function calculatePrecision() {
+async function calculatePrecision(top_k) {
     const groundTruth = JSON.parse(
         await fs.readFile(groundTruthPath, "utf-8")
     );
@@ -49,7 +49,7 @@ async function calculatePrecision() {
             continue;
         }
 
-        const retrievedChunks = result.retrieved_chunks;
+        const retrievedChunks = result.retrieved_chunks.slice(0,top_k);
 
         let relevantRetrieved = 0;
 
@@ -82,6 +82,6 @@ async function calculatePrecision() {
     );
 }
 
-calculatePrecision().catch(error => {
+calculatePrecision(10).catch(error => {
     console.error("Error calculating precision:", error);
 });

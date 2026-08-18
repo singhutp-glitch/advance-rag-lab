@@ -1,0 +1,242 @@
+[
+  {
+    "query_id": "cot_q6",
+    "query": "Why might asking a language model to explicitly work through a problem step by step improve its ability to solve difficult tasks?",
+    "retrieved_chunks": [
+      525,
+      528,
+      515,
+      577,
+      574,
+      519,
+      516,
+      545,
+      530,
+      538
+    ]
+  },
+  {
+    "query_id": "cot_q7",
+    "query": "What does the paper suggest about why expressing intermediate reasoning in natural language is useful?",
+    "retrieved_chunks": [
+      577,
+      515,
+      525,
+      519,
+      523,
+      528,
+      571,
+      546,
+      516,
+      579
+    ]
+  },
+  {
+    "query_id": "cot_q8",
+    "query": "On what kind of problems does the reasoning approach provide the largest performance improvements?",
+    "retrieved_chunks": [
+      516,
+      515,
+      538,
+      579,
+      574,
+      562,
+      559,
+      528,
+      577,
+      571
+    ]
+  },
+  {
+    "query_id": "cot_q9",
+    "query": "At approximately what model size does the ability to benefit from this reasoning technique begin to appear?",
+    "retrieved_chunks": [
+      515,
+      518,
+      537,
+      574,
+      519,
+      579,
+      559,
+      516,
+      530,
+      525
+    ]
+  },
+  {
+    "query_id": "cot_q10",
+    "query": "How does the reasoning method affect a model's ability to handle problems requiring longer sequences of steps than those seen in its examples?",
+    "retrieved_chunks": [
+      515,
+      525,
+      562,
+      567,
+      577,
+      571,
+      528,
+      516,
+      523,
+      579
+    ]
+  },
+  {
+    "query_id": "crossing_q6",
+    "query": "Why is moving a technology from early enthusiasts to ordinary mainstream buyers especially dangerous for a company?",
+    "retrieved_chunks": [
+      599,
+      600,
+      624,
+      635,
+      627,
+      618,
+      633,
+      605,
+      632,
+      616
+    ]
+  },
+  {
+    "query_id": "crossing_q7",
+    "query": "What happens to the people and organizations involved when a high-tech venture fails?",
+    "retrieved_chunks": [
+      590,
+      591,
+      596,
+      623,
+      632,
+      604,
+      630,
+      599,
+      594,
+      595
+    ]
+  },
+  {
+    "query_id": "crossing_q8",
+    "query": "Why does the author consider predictable success in bringing technology products to market important for the broader economy?",
+    "retrieved_chunks": [
+      594,
+      611,
+      596,
+      637,
+      595,
+      631,
+      623,
+      600,
+      632,
+      621
+    ]
+  },
+  {
+    "query_id": "crossing_q9",
+    "query": "How does the author distinguish improvements that preserve existing behavior from innovations that force customers to change how they operate?",
+    "retrieved_chunks": [
+      625,
+      621,
+      626,
+      622,
+      629,
+      636,
+      630,
+      749,
+      616,
+      624
+    ]
+  },
+  {
+    "query_id": "crossing_q10",
+    "query": "What has to happen for a new technology to move from enthusiastic early adoption into a repeatable mainstream business?",
+    "retrieved_chunks": [
+      627,
+      635,
+      633,
+      618,
+      624,
+      629,
+      619,
+      637,
+      623,
+      631
+    ]
+  },
+  {
+    "query_id": "mckinsey_q6",
+    "query": "How did the researchers move from individual examples of AI use to an estimate for entire industries?",
+    "retrieved_chunks": [
+      753,
+      742,
+      749,
+      747,
+      752,
+      740,
+      751,
+      750,
+      741,
+      757
+    ]
+  },
+  {
+    "query_id": "mckinsey_q7",
+    "query": "Why would the analysis leave certain business expenses out when calculating the productivity opportunity from AI?",
+    "retrieved_chunks": [
+      748,
+      740,
+      750,
+      747,
+      754,
+      755,
+      745,
+      743,
+      629,
+      751
+    ]
+  },
+  {
+    "query_id": "mckinsey_q8",
+    "query": "How widespread could the effects of large language models be across the US workforce according to the cited research?",
+    "retrieved_chunks": [
+      771,
+      779,
+      514,
+      773,
+      764,
+      515,
+      765,
+      519,
+      763,
+      781
+    ]
+  },
+  {
+    "query_id": "mckinsey_q9",
+    "query": "Which human capabilities does the report identify as being especially relevant to tasks that generative AI may automate?",
+    "retrieved_chunks": [
+      785,
+      763,
+      767,
+      779,
+      765,
+      782,
+      761,
+      758,
+      760,
+      780
+    ]
+  },
+  {
+    "query_id": "mckinsey_q10",
+    "query": "Which kinds of workers are expected to experience particularly high exposure to generative AI according to the cited research?",
+    "retrieved_chunks": [
+      779,
+      767,
+      763,
+      765,
+      773,
+      747,
+      771,
+      757,
+      785,
+      761
+    ]
+  }
+]

@@ -12,10 +12,10 @@ const groundTruthPath = path.resolve(
 
 const retrievalResultsPath = path.resolve(
     __dirname,
-    "./results/hybridRetrievalResults.json"
+    "./results/denseRetrievalResults.json"
 );
 
-async function calculateRecall() {
+async function calculateRecall(top_k) {
     const groundTruth = JSON.parse(
         await fs.readFile(groundTruthPath, "utf-8")
     );
@@ -50,7 +50,7 @@ async function calculateRecall() {
             continue;
         }
 
-        const retrievedChunks = result.retrieved_chunks;
+        const retrievedChunks = result.retrieved_chunks.slice(0,top_k);
 
         // All ground-truth chunks with relevance > 0
         const relevantGroundTruthChunks = [...relevanceMap.entries()]
@@ -91,6 +91,6 @@ async function calculateRecall() {
     );
 }
 
-calculateRecall().catch(error => {
+calculateRecall(10).catch(error => {
     console.error("Error calculating recall:", error);
 });

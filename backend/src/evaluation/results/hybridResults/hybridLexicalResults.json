@@ -1,0 +1,242 @@
+[
+  {
+    "query_id": "cot_q1",
+    "query": "What is chain-of-thought prompting and what does a chain of thought consist of?",
+    "retrieved_chunks": [
+      527,
+      523,
+      534,
+      571,
+      525,
+      515,
+      528,
+      547,
+      570,
+      516
+    ]
+  },
+  {
+    "query_id": "cot_q2",
+    "query": "What are the limitations of rationale-augmented training and traditional few-shot prompting?",
+    "retrieved_chunks": [
+      523,
+      575,
+      578,
+      519,
+      522,
+      518,
+      534,
+      558,
+      568,
+      574
+    ]
+  },
+  {
+    "query_id": "cot_q3",
+    "query": "What are the attractive properties of chain-of-thought reasoning?",
+    "retrieved_chunks": [
+      527,
+      528,
+      579,
+      515,
+      571,
+      525,
+      529,
+      516,
+      547,
+      575
+    ]
+  },
+  {
+    "query_id": "cot_q4",
+    "query": "What does the paper say about chain-of-thought being an emergent ability of model scale?",
+    "retrieved_chunks": [
+      537,
+      574,
+      579,
+      542,
+      515,
+      525,
+      523,
+      516,
+      543,
+      571
+    ]
+  },
+  {
+    "query_id": "cot_q5",
+    "query": "What variations of chain-of-thought prompting are evaluated in the ablation study?",
+    "retrieved_chunks": [
+      544,
+      545,
+      546,
+      547,
+      548,
+      571,
+      550,
+      516,
+      534,
+      549
+    ]
+  },
+  {
+    "query_id": "crossing_q1",
+    "query": "Why does the author argue that a less successful high-tech product can sometimes be feature-for-feature superior to the product that beats it?",
+    "retrieved_chunks": [
+      588,
+      585,
+      607,
+      596,
+      595,
+      594,
+      637,
+      604,
+      591,
+      599
+    ]
+  },
+  {
+    "query_id": "crossing_q2",
+    "query": "Why does the author say the default model for developing a high-tech market is almost—but not quite—right?",
+    "retrieved_chunks": [
+      596,
+      595,
+      632,
+      623,
+      599,
+      607,
+      605,
+      630,
+      604,
+      616
+    ]
+  },
+  {
+    "query_id": "crossing_q3",
+    "query": "What is the chasm in high-tech marketing?",
+    "retrieved_chunks": [
+      599,
+      632,
+      612,
+      623,
+      616,
+      605,
+      607,
+      620,
+      604,
+      628
+    ]
+  },
+  {
+    "query_id": "crossing_q4",
+    "query": "What does the author say about whether the chasm can be crossed successfully?",
+    "retrieved_chunks": [
+      612,
+      587,
+      598,
+      610,
+      600,
+      599,
+      620,
+      628,
+      608,
+      613
+    ]
+  },
+  {
+    "query_id": "crossing_q5",
+    "query": "What is the Technology Adoption Life Cycle and what does it describe?",
+    "retrieved_chunks": [
+      631,
+      619,
+      627,
+      624,
+      633,
+      620,
+      623,
+      634,
+      632,
+      630
+    ]
+  },
+  {
+    "query_id": "mckinsey_q1",
+    "query": "What was the overall objective of McKinsey's assessment of the economic impact of generative AI and foundation models?",
+    "retrieved_chunks": [
+      740,
+      742,
+      756,
+      753,
+      747,
+      780,
+      757,
+      741,
+      754,
+      750
+    ]
+  },
+  {
+    "query_id": "mckinsey_q2",
+    "query": "What business functions are included in McKinsey's analysis of generative AI use cases?",
+    "retrieved_chunks": [
+      747,
+      742,
+      740,
+      748,
+      741,
+      753,
+      780,
+      746,
+      750,
+      785
+    ]
+  },
+  {
+    "query_id": "mckinsey_q3",
+    "query": "What types of benefits are excluded from McKinsey's direct impact analysis of generative AI?",
+    "retrieved_chunks": [
+      748,
+      742,
+      755,
+      747,
+      750,
+      740,
+      741,
+      753,
+      752,
+      766
+    ]
+  },
+  {
+    "query_id": "mckinsey_q4",
+    "query": "What limitations does McKinsey identify about its estimates of the economic impact of generative AI?",
+    "retrieved_chunks": [
+      754,
+      755,
+      742,
+      740,
+      748,
+      747,
+      780,
+      751,
+      753,
+      741
+    ]
+  },
+  {
+    "query_id": "mckinsey_q5",
+    "query": "What four phases does McKinsey use in its model of automation adoption?",
+    "retrieved_chunks": [
+      784,
+      758,
+      782,
+      781,
+      785,
+      780,
+      760,
+      630,
+      742,
+      787
+    ]
+  }
+]

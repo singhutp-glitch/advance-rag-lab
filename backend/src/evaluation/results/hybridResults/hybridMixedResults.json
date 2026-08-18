@@ -1,0 +1,242 @@
+[
+  {
+    "query_id": "cot_q11",
+    "query": "How does chain-of-thought prompting combine few-shot learning with intermediate reasoning steps?",
+    "retrieved_chunks": [
+      525,
+      523,
+      515,
+      528,
+      571,
+      516,
+      527,
+      546,
+      545,
+      519
+    ]
+  },
+  {
+    "query_id": "cot_q12",
+    "query": "How did chain-of-thought prompting affect PaLM 540B's performance on GSM8K compared with standard prompting?",
+    "retrieved_chunks": [
+      539,
+      516,
+      524,
+      521,
+      559,
+      520,
+      538,
+      552,
+      530,
+      525
+    ]
+  },
+  {
+    "query_id": "cot_q13",
+    "query": "What did the researchers find when they manually examined cases where the model produced correct and incorrect answers?",
+    "retrieved_chunks": [
+      540,
+      575,
+      526,
+      547,
+      543,
+      516,
+      580,
+      747,
+      515,
+      748
+    ]
+  },
+  {
+    "query_id": "cot_q14",
+    "query": "How robust was the method when different people wrote the reasoning examples used for prompting?",
+    "retrieved_chunks": [
+      549,
+      552,
+      555,
+      554,
+      571,
+      550,
+      515,
+      523,
+      525,
+      516
+    ]
+  },
+  {
+    "query_id": "cot_q15",
+    "query": "What limitation does the paper identify regarding the cost of deploying reasoning capabilities in real-world applications?",
+    "retrieved_chunks": [
+      575,
+      523,
+      571,
+      556,
+      579,
+      756,
+      574,
+      561,
+      516,
+      608
+    ]
+  },
+  {
+    "query_id": "crossing_q11",
+    "query": "Who are the main customer groups on the early-market and mainstream-market sides of the chasm?",
+    "retrieved_chunks": [
+      599,
+      612,
+      636,
+      605,
+      616,
+      628,
+      600,
+      620,
+      611,
+      630
+    ]
+  },
+  {
+    "query_id": "crossing_q12",
+    "query": "Why does crossing the chasm require everyone in the company—not just marketing and sales—to focus on the same objective?",
+    "retrieved_chunks": [
+      604,
+      613,
+      599,
+      612,
+      587,
+      620,
+      628,
+      600,
+      601,
+      616
+    ]
+  },
+  {
+    "query_id": "crossing_q13",
+    "query": "How does the author use the distinction between a fad and a trend to explain the challenge of marketing innovative high-tech products?",
+    "retrieved_chunks": [
+      605,
+      607,
+      632,
+      623,
+      599,
+      630,
+      612,
+      596,
+      636,
+      595
+    ]
+  },
+  {
+    "query_id": "crossing_q14",
+    "query": "What does the author recommend companies prioritize during the crossing period: exceptional marketing ideas or organizational unity and disciplined execution?",
+    "retrieved_chunks": [
+      613,
+      604,
+      600,
+      614,
+      599,
+      612,
+      620,
+      601,
+      628,
+      746
+    ]
+  },
+  {
+    "query_id": "crossing_q15",
+    "query": "Why does the Technology Adoption Life Cycle divide technology customers into different groups?",
+    "retrieved_chunks": [
+      636,
+      624,
+      631,
+      619,
+      632,
+      623,
+      627,
+      628,
+      620,
+      633
+    ]
+  },
+  {
+    "query_id": "mckinsey_q11",
+    "query": "Why did McKinsey use a bottom-up, use-case-based approach to estimate the value of generative AI?",
+    "retrieved_chunks": [
+      742,
+      741,
+      740,
+      747,
+      753,
+      754,
+      756,
+      750,
+      749,
+      748
+    ]
+  },
+  {
+    "query_id": "mckinsey_q12",
+    "query": "How did McKinsey estimate the potential quantitative impact of generative AI for individual business use cases?",
+    "retrieved_chunks": [
+      747,
+      742,
+      740,
+      753,
+      741,
+      754,
+      761,
+      751,
+      748,
+      752
+    ]
+  },
+  {
+    "query_id": "mckinsey_q13",
+    "query": "How did McKinsey evaluate whether generative AI could technically automate different work activities?",
+    "retrieved_chunks": [
+      785,
+      782,
+      758,
+      761,
+      781,
+      762,
+      780,
+      760,
+      742,
+      741
+    ]
+  },
+  {
+    "query_id": "mckinsey_q14",
+    "query": "How did the cited OpenAI, OpenResearch, and University of Pennsylvania study define whether a work task was exposed to an LLM?",
+    "retrieved_chunks": [
+      764,
+      771,
+      763,
+      779,
+      773,
+      765,
+      782,
+      781,
+      767,
+      565
+    ]
+  },
+  {
+    "query_id": "mckinsey_q15",
+    "query": "What factors does McKinsey consider when estimating when AI automation will actually be adopted, rather than merely being technically possible?",
+    "retrieved_chunks": [
+      758,
+      761,
+      759,
+      780,
+      760,
+      762,
+      787,
+      782,
+      784,
+      785
+    ]
+  }
+]

@@ -8,7 +8,7 @@ const __dirname = path.dirname(__filename);
 const groundTruthPath = path.resolve(__dirname, "./ground_truth.json");
 const retrievalResultsPath = path.resolve(
     __dirname,
-    "./results/bm25RetrievalResults.json"
+    "./results/hybridResults/hybridMixedResults.json"
 );
 
 function calculateDCG(relevances, k) {
@@ -36,7 +36,7 @@ function calculateNDCG(retrievedRelevances, idealRelevances, k) {
     return dcg / idcg;
 }
 
-async function calculateAllNDCG() {
+async function calculateAllNDCG(top_k) {
     const groundTruth = JSON.parse(
         await fs.readFile(groundTruthPath, "utf-8")
     );
@@ -75,7 +75,7 @@ async function calculateAllNDCG() {
         }
 
         // Relevance grades in the actual retrieval order
-        const retrievedRelevances = result.retrieved_chunks.map(
+        const retrievedRelevances = result.retrieved_chunks.slice(0,top_k).map(
             chunkId => relevanceMap.get(String(chunkId)) ?? 0
         );
 
@@ -84,7 +84,7 @@ async function calculateAllNDCG() {
             relevanceMap.values()
         ).sort((a, b) => b - a);
 
-        const k = result.retrieved_chunks.length;
+        const k = result.retrieved_chunks.slice(0,top_k).length;
 
         const ndcg = calculateNDCG(
             retrievedRelevances,
@@ -111,6 +111,6 @@ async function calculateAllNDCG() {
     );
 }
 
-calculateAllNDCG().catch(error => {
+calculateAllNDCG(5).catch(error => {
     console.error("Error calculating nDCG:", error);
 });

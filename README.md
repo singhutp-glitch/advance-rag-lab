@@ -1,16 +1,197 @@
 # Advanced RAG Lab
 
-An engineering-focused repository for researching, implementing, and evaluating advanced Retrieval-Augmented Generation (RAG) techniques beyond a basic document chatbot.
+An engineering-focused repository for implementing and evaluating advanced **Retrieval-Augmented Generation (RAG)** techniques beyond a basic document chatbot.
 
-Rather than building another end-user application, this project focuses on the intelligence layer of modern RAG systems—improving how documents are parsed, represented, indexed, retrieved, and evaluated to increase answer accuracy on complex business documents.
+The project focuses on the retrieval and document intelligence layer of RAG systems — improving how complex documents are parsed, chunked, represented, searched, and evaluated.
 
-The repository serves as an experimentation platform for implementing production-oriented RAG techniques commonly used in enterprise document intelligence systems.
+It is designed around practical problems encountered in **business and enterprise documents**, including reports, policies, technical manuals, financial documents, compliance material, and research papers.
+
+---
+# Implemented Techniques
+
+The repository currently contains two major implemented RAG techniques. Each technique is documented as a separate experiment, including its implementation approach and evaluation.
+
+| # | Technique                                                | What it covers                                                                                                                                             |
+| - | -------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1 | **Advanced Document Parsing & Structure-Aware Chunking** | Structure-preserving document parsing and context-aware chunking using document elements such as headings, paragraphs, tables, lists, and page information |
+| 2 | **Dense, BM25 & Hybrid Retrieval**                       | Implementation and comparison of dense vector retrieval, BM25 lexical retrieval, and hybrid retrieval using a ground-truth evaluation dataset              |
 
 ---
 
+# 1. Advanced Document Parsing & Structure-Aware Chunking
+
+The first implemented technique focuses on improving the document ingestion stage of a RAG pipeline.
+
+Basic RAG systems often extract a document as plain text and then split it into fixed-size chunks. This can work for simple documents, but it can break the relationships between headings, paragraphs, tables, lists, and other structured elements.
+
+This experiment uses **Docling** to parse documents while preserving their structure.
+
+The parsing pipeline extracts information such as:
+
+* Headings and section hierarchy
+* Paragraphs
+* Tables
+* Lists
+* Page information
+* Document metadata
+* Other structured document elements
+
+The structured output is then passed to a chunking pipeline that uses these elements to create more meaningful chunks instead of relying only on fixed character or token limits.
+
+### Chunking Approach
+
+The implemented chunking strategy is based on the idea that a chunk should represent an atomic information unit while retaining the context needed to understand it.
+
+Depending on the document structure, chunks can represent elements such as:
+
+* Paragraphs
+* Lists
+* Tables
+* Other structured content
+
+Relevant section and page information is retained as metadata with each chunk.
+
+A chunk is represented using fields such as:
+
+```text
+Chunk
+ ├── Markdown content
+ ├── Chunk index
+ ├── Page information
+ ├── Section heading
+ └── Element type
+```
+
+The resulting chunks provide a structured document representation for the retrieval experiments that follow.
+
+### What Was Implemented
+
+The experiment includes:
+
+* Document parsing using Docling
+* Preservation of document structure
+* Extraction of headings, tables, lists, and other elements
+* Structure-aware chunk creation
+* Section and page metadata
+* Normalized chunk representation
+* Chunk output suitable for downstream retrieval
+
+The result is a document processing pipeline that preserves substantially more of the original document structure than basic text extraction and fixed-size chunking.
+
+---
+
+# 2. Dense, BM25 & Hybrid Retrieval
+
+The second implemented technique focuses on the retrieval stage of the RAG pipeline.
+
+Instead of relying on a single retrieval method, three approaches were implemented and compared:
+
+* **Dense retrieval** — semantic vector search using embeddings
+* **BM25 retrieval** — lexical search based on term matching
+* **Hybrid retrieval** — combination of dense and BM25 results
+
+### Dense Retrieval
+
+Dense retrieval converts queries and document chunks into embedding vectors and retrieves chunks based on their semantic similarity.
+
+This allows the system to retrieve relevant information even when the query and document use different wording but express a similar meaning.
+
+```text
+Query
+  │
+  ▼
+Query Embedding
+  │
+  ▼
+Vector Search
+  │
+  ▼
+Top-K Chunks
+```
+
+### BM25 Retrieval
+
+BM25 provides a lexical retrieval approach based on the terms appearing in the query and document.
+
+It is useful for cases where exact terms are important, such as technical terminology, company names, identifiers, and domain-specific keywords.
+
+```text
+Query
+  │
+  ▼
+Term Matching
+  │
+  ▼
+BM25 Scoring
+  │
+  ▼
+Top-K Chunks
+```
+
+### Hybrid Retrieval
+
+Hybrid retrieval combines the results from dense and BM25 retrieval.
+
+```text
+                 Query
+                   │
+          ┌────────┴────────┐
+          ▼                 ▼
+    Dense Retrieval     BM25 Retrieval
+          │                 │
+          ▼                 ▼
+    Semantic Results    Lexical Results
+          │                 │
+          └────────┬────────┘
+                   ▼
+              Result Fusion
+                   │
+                   ▼
+                 Top-K
+```
+
+The purpose is to combine the strengths of both approaches: semantic matching from dense retrieval and exact lexical matching from BM25.
+
+### Retrieval Evaluation
+
+The three retrieval approaches were evaluated using a **ground-truth dataset containing queries and their relevant chunk IDs**.
+
+The same document chunks, queries, and relevance information were used for Dense, BM25, and Hybrid retrieval so that the approaches could be compared under the same conditions.
+
+The evaluation measures:
+
+* **Recall** — how many relevant chunks were retrieved
+* **Precision** — how many retrieved chunks were relevant
+* **nDCG** — how well relevant chunks were ranked within the retrieved results
+
+The evaluation workflow is:
+
+```text
+Ground-Truth Queries
+        │
+        ▼
+ ┌──────┼────────┐
+ ▼      ▼        ▼
+Dense  BM25    Hybrid
+ │      │        │
+ └──────┼────────┘
+        ▼
+   Retrieved Chunks
+        │
+        ▼
+Compare with Ground Truth
+        │
+        ▼
+Recall / Precision / nDCG
+```
+
+This makes the retrieval experiment more than an implementation comparison: the different approaches are evaluated quantitatively using the same ground-truth queries and relevant chunk mappings.
+
+The retrieval experiments therefore provide a baseline for future work such as query rewriting, reranking, metadata filtering, multi-query retrieval, and other advanced retrieval techniques.
+
 # Motivation
 
-A typical RAG pipeline looks like this:
+A typical basic RAG pipeline looks like:
 
 ```text
 Document
@@ -31,7 +212,9 @@ Vector Search
 LLM
 ```
 
-This approach works reasonably well for simple documents, but begins to fail when processing real business knowledge such as:
+This approach works reasonably well for simple documents but can become unreliable when documents contain significant structure.
+
+Examples include:
 
 * Annual reports
 * Company policies
@@ -41,147 +224,109 @@ This approach works reasonably well for simple documents, but begins to fail whe
 * Compliance documentation
 * Research papers
 
-These documents contain rich structure—including headings, tables, lists, figures, appendices, and metadata—that is often lost during plain text extraction.
+These documents contain headings, tables, lists, figures, appendices, and metadata that can be lost during basic text extraction.
 
-Once that structure is discarded, retrieval quality degrades regardless of how capable the language model is.
+Retrieval can also suffer when only one search strategy is used. Dense retrieval and lexical retrieval have different strengths, which makes comparing and combining them useful for real-world RAG systems.
 
-This repository explores techniques that preserve and utilize document structure to build more reliable retrieval pipelines.
+This project therefore focuses on improving the parts of the pipeline that directly affect the quality of retrieved context.
 
 ---
 
 # Repository Goals
 
-The objectives of this repository are:
+The repository is intended to:
 
-* Implement structure-preserving document ingestion pipelines.
-* Evaluate different chunking strategies.
-* Improve retrieval quality on complex business documents.
-* Experiment with modern RAG techniques proposed in recent research.
-* Build repeatable evaluation workflows for measuring retrieval improvements.
-* Demonstrate engineering approaches that move beyond basic semantic search.
-
----
-
-# Current Focus
-
-## Structure-Preserving Document Parsing
-
-The current development effort focuses on parsing documents while preserving their logical structure rather than flattening everything into plain text.
-
-Examples include:
-
-* Heading hierarchy
-* Sections and subsections
-* Tables
-* Lists
-* Document metadata
-* Page information
-* Structured document elements
-
-The goal is to generate richer document representations that can support higher-quality retrieval.
+* Implement structure-preserving document ingestion.
+* Experiment with different chunking strategies.
+* Compare dense and lexical retrieval.
+* Implement hybrid retrieval.
+* Evaluate retrieval using ground-truth relevance data.
+* Measure retrieval improvements quantitatively.
+* Experiment with additional RAG techniques as the project grows.
+* Provide reproducible implementations that can be applied to production-oriented document intelligence systems.
 
 ---
 
-## Context-Aware Chunking
+# Planned Techniques
 
-Instead of relying solely on fixed-size chunking, this repository explores chunking strategies that preserve semantic and structural context.
-
-Areas of experimentation include:
-
-* Section-aware chunking
-* Heading-aware chunking
-* List-aware chunking
-* Table-aware chunking
-* Context-enriched chunks
-* Chunk metadata generation
-
-The objective is to reduce context fragmentation and improve retrieval precision.
-
----
-
-# Technology Direction
-
-The project adopts a hybrid architecture:
-
-```text
-Node.js Backend
-        │
-        ▼
-Python Document Processing Service
-        │
-        ▼
-Docling
-        │
-        ▼
-Structured Document Representation
-        │
-        ▼
-Chunking Pipeline
-        │
-        ▼
-Embedding Generation
-        │
-        ▼
-Vector Database
-```
-
-The existing Node.js application provides the surrounding infrastructure, while Python is used for document processing because of its mature ecosystem for document AI.
-
----
-
-# Planned Areas of Research
-
-This repository is intended to grow into an experimentation platform for advanced RAG techniques.
-
-Planned topics include:
+The following areas represent **future experiments**. They have not been implemented yet.
 
 ## Document Processing
 
-* Structure-preserving PDF parsing
 * Advanced DOCX parsing
-* Layout-aware document extraction
-* Table extraction
-* Metadata extraction
+* Layout-aware extraction improvements
+* Improved table extraction
 * Figure and caption handling
-
----
+* Additional metadata extraction
 
 ## Chunking
 
 * Recursive chunking
 * Semantic chunking
-* Context-aware chunking
-* Structure-aware chunking
-* Table-aware chunking
 * Hierarchical chunking
-
----
+* Parent-child chunking
+* Additional context-aware chunking strategies
 
 ## Retrieval
 
-* Dense retrieval
-* Hybrid keyword + vector retrieval
 * Metadata filtering
 * Query expansion
 * Query rewriting
 * Multi-query retrieval
-* Parent-child retrieval
-* Reranking
+* Additional retrieval fusion strategies
+
+## Reranking
+
+* Cross-encoder reranking
+* LLM-based reranking
+* Retrieval + reranking pipelines
+
+## Generation & Evaluation
+
+* Citation quality evaluation
+* Answer groundedness evaluation
+* Faithfulness evaluation
+* End-to-end answer quality evaluation
+* Advanced RAG prompting strategies
+
+## System-Level Evaluation
+
+* Retrieval regression testing
+* Latency measurements
+* Cost analysis
+* Experiment tracking
+* RAG observability
 
 ---
 
-## Evaluation
+# Experimental Workflow
 
-Rather than only demonstrating implementations, the repository also evaluates them.
+Each technique follows a common experimental workflow:
 
-Experiments compare techniques using representative business documents and measure improvements such as:
+```text
+Implementation
+      │
+      ▼
+Test Dataset
+      │
+      ▼
+Experiment
+      │
+      ▼
+Ground Truth
+      │
+      ▼
+Metrics
+      │
+      ▼
+Comparison
+      │
+      ▼
+Findings
+```
 
-* Retrieval accuracy
-* Citation quality
-* Context preservation
-* Table retrieval performance
-* Answer grounding quality
+The evaluation setup is designed to make different RAG techniques comparable under consistent conditions.
 
-Where appropriate, experiments include before/after comparisons and quantitative evaluation.
+For retrieval experiments, the same document chunks, queries, and ground-truth relevance mappings are used across Dense, BM25, and Hybrid retrieval.
 
----
+As new techniques are implemented, they will be added to the **Implemented Techniques** section and documented in their own dedicated section. Techniques that have not yet been implemented remain under **Planned Techniques**.
